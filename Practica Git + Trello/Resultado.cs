@@ -16,5 +16,37 @@ namespace Practica_Git___Trello
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (true)
+            {
+                this.Hide();
+
+                Login form = new Login();
+                form.Show();
+
+            }
+        }
+        
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            formPrincipal formP = new formPrincipal();
+
+            formP.Show();
+        }
     }
 }
