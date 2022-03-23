@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica Git + Trello", "Practica Git + Trello\Practica Git + Trello.csproj", "{2305E5A9-07F9-4BCB-A2F1-48E88E168F15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2305E5A9-07F9-4BCB-A2F1-48E88E168F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2305E5A9-07F9-4BCB-A2F1-48E88E168F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2305E5A9-07F9-4BCB-A2F1-48E88E168F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2305E5A9-07F9-4BCB-A2F1-48E88E168F15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62EFBDC9-3022-40C4-858D-D92674BD3B37}
+	EndGlobalSection
+EndGlobal
