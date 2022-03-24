@@ -29,12 +29,14 @@ namespace Practica_Git___Trello
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.boton_D = new System.Windows.Forms.Button();
             this.boton_C = new System.Windows.Forms.Button();
             this.boton_B = new System.Windows.Forms.Button();
             this.boton_A = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,14 +122,21 @@ namespace Practica_Git___Trello
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(700, 68);
             this.label1.TabIndex = 6;
             this.label1.Text = "1 ¿Cual es la velocidad de la luz?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.ticks);
             // 
             // formPrincipal
             // 
@@ -153,6 +162,7 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.Button boton_A;
         private System.Windows.Forms.FlowLayoutPanel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
