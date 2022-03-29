@@ -16,6 +16,9 @@ namespace Practica_Git___Trello
         public Login()
         {
             InitializeComponent();
+            btn_avanzar.BackColor = Color.FromArgb(84, 37, 158);
+            btn_avanzar.FlatAppearance.BorderColor = Color.FromArgb(84, 37, 158);
+            this.BackColor = Color.FromArgb(84, 37, 158);
         }
 
         private void btn_avanzar_Click(object sender, EventArgs e)
