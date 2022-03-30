@@ -36,7 +36,7 @@ namespace Practica_Git___Trello
             this.progressBar1.Increment(1);
             
         }
-        // a
+
 
         int i = 1;
 
