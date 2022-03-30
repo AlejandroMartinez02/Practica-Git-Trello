@@ -20,7 +20,7 @@ namespace Practica_Git___Trello
             }
             base.Dispose(disposing);
         }
-
+        // 
         #region Windows Form Designer generated code
 
         /// <summary>
