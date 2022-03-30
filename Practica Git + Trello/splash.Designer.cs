@@ -49,6 +49,7 @@ namespace Practica_Git___Trello
             this.label1.TabIndex = 0;
             this.label1.Text = "TOGETHER!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseLeave += new System.EventHandler(this.retornarTamanyo);
             this.label1.MouseHover += new System.EventHandler(this.cambiarTamanyo);
             // 
