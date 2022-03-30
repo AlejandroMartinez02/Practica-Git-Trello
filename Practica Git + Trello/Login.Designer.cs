@@ -29,22 +29,22 @@ namespace Practica_Git___Trello
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_Logo = new System.Windows.Forms.PictureBox();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.btn_avanzar = new System.Windows.Forms.Button();
             this.tb_usuario = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pb_Logo
             // 
-            this.pictureBox1.Image = global::Practica_Git___Trello.Properties.Resources.kahoot1;
-            this.pictureBox1.Location = new System.Drawing.Point(158, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(455, 174);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pb_Logo.Image = global::Practica_Git___Trello.Properties.Resources.entornos2;
+            this.pb_Logo.Location = new System.Drawing.Point(85, 12);
+            this.pb_Logo.Name = "pb_Logo";
+            this.pb_Logo.Size = new System.Drawing.Size(618, 313);
+            this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Logo.TabIndex = 0;
+            this.pb_Logo.TabStop = false;
             // 
             // lbl_nombre
             // 
@@ -80,16 +80,19 @@ namespace Practica_Git___Trello
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 562);
             this.Controls.Add(this.tb_usuario);
             this.Controls.Add(this.btn_avanzar);
             this.Controls.Add(this.lbl_nombre);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pb_Logo);
+            this.MaximumSize = new System.Drawing.Size(818, 609);
+            this.MinimumSize = new System.Drawing.Size(818, 609);
             this.Name = "Login";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,7 +100,7 @@ namespace Practica_Git___Trello
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_Logo;
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.Button btn_avanzar;
         private System.Windows.Forms.TextBox tb_usuario;
