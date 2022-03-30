@@ -72,7 +72,7 @@ namespace Practica_Git___Trello
             this.principal.TabIndex = 2;
             this.principal.Text = "REINICIAR MISMO NOMBRE";
             this.principal.UseVisualStyleBackColor = true;
-            this.principal.Click += new System.EventHandler(this.button3_Click);
+            this.principal.Click += new System.EventHandler(this.reiniciar);
             // 
             // label1
             // 
@@ -109,7 +109,6 @@ namespace Practica_Git___Trello
             this.label4.Size = new System.Drawing.Size(47, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "TOP 3";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 

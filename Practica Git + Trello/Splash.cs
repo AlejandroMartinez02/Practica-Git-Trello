@@ -62,15 +62,5 @@ namespace Practica_Git___Trello
         {
             this.Close();
         }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
