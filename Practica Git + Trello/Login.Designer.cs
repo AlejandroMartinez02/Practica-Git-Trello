@@ -38,7 +38,7 @@ namespace Practica_Git___Trello
             // 
             // pb_Logo
             // 
-            this.pb_Logo.Image = global::Practica_Git___Trello.Properties.Resources.entornos2;
+            this.pb_Logo.BackgroundImage = global::Practica_Git___Trello.Properties.Resources.entornos;
             this.pb_Logo.Location = new System.Drawing.Point(85, 12);
             this.pb_Logo.Name = "pb_Logo";
             this.pb_Logo.Size = new System.Drawing.Size(618, 313);
