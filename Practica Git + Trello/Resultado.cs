@@ -42,9 +42,10 @@ namespace Practica_Git___Trello
         {
             this.Hide();
             Login form = new Login();
-            form.Show();
-            formPrincipal otroIntento = new formPrincipal();
             form.ShowDialog();
+            formPrincipal otroIntento = new formPrincipal();
+            otroIntento.ShowDialog();
+            this.Show();
         }
     }
 }
