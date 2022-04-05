@@ -30,31 +30,18 @@ namespace Practica_Git___Trello
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.pb_logo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(217, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 90);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "TOGETHER!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.MouseLeave += new System.EventHandler(this.retornarTamanyo);
-            this.label1.MouseHover += new System.EventHandler(this.cambiarTamanyo);
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(217, 360);
+            this.progressBar1.Location = new System.Drawing.Point(244, 360);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(315, 29);
             this.progressBar1.Step = 20;
@@ -74,7 +61,7 @@ namespace Practica_Git___Trello
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(311, 319);
+            this.label2.Location = new System.Drawing.Point(343, 319);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 38);
             this.label2.TabIndex = 2;
@@ -87,15 +74,25 @@ namespace Practica_Git___Trello
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.tick_3);
             // 
+            // pb_logo
+            // 
+            this.pb_logo.BackgroundImage = global::Practica_Git___Trello.Properties.Resources.logo;
+            this.pb_logo.Location = new System.Drawing.Point(88, 56);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(626, 196);
+            this.pb_logo.TabIndex = 3;
+            this.pb_logo.TabStop = false;
+            // 
             // splash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.pb_logo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(80, 31);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 500);
             this.MinimumSize = new System.Drawing.Size(800, 500);
@@ -103,17 +100,17 @@ namespace Practica_Git___Trello
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "TOGETHER";
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.PictureBox pb_logo;
     }
 }

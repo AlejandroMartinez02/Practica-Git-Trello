@@ -17,19 +17,6 @@ namespace Practica_Git___Trello
             InitializeComponent();
 
         }
-
-        private void cambiarTamanyo(object sender, EventArgs e)
-        {
-            //Comenta las cosas
-            label1.Font = new Font(label1.Font.Name, 25, label1.Font.Style);
-            
-        }
-
-        private void retornarTamanyo(object sender, EventArgs e)
-        {
-            label1.Font = new Font(label1.Font.Name, 20, label1.Font.Style);
-        }
-
         private void ticks(object sender, EventArgs e)
         {
             progressBar1.ForeColor = Color.Blue;
