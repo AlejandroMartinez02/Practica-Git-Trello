@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 
 namespace Practica_Git___Trello
 {
@@ -16,26 +15,36 @@ namespace Practica_Git___Trello
         public splash()
         {
             InitializeComponent();
-            NpgsqlConnection conn = new NpgsqlConnection(@"Host=ec2-52-48-159-67.eu-west-1.compute.amazonaws.com;
-                                Username=hipogxdbddiilb;
-                                Password=54dafab8b0782f75f681da9e42410f32bddd82a201c20678ffafb97c4bfa6339;
-                                Database=dfcnacrkg93eqm;");
-            this.circularProgressBar1.Value = 0;
-            this.circularProgressBar1.Font = new Font(this.circularProgressBar1.Font.Name, 15, this.circularProgressBar1.Font.Style);
+
         }
         private void ticks(object sender, EventArgs e)
         {
-            this.circularProgressBar1.Increment(1);
-            this.circularProgressBar1.Text = this.circularProgressBar1.Value.ToString() + "%";
-
-            if(this.circularProgressBar1.Value == this.circularProgressBar1.Maximum)
-            {
-                this.timer2.Enabled = true;
-            }
+            progressBar1.ForeColor = Color.Blue;
+            this.progressBar1.Increment(1);
             
         }
 
-        private void cerrar(object sender, EventArgs e)
+        int i = 1;
+
+        private void tick_3(object sender, EventArgs e)
+        {
+            if(i == 1)
+            {
+                label2.Text = "Cargando .";
+                i++;
+            }else if(i == 2)
+            {
+                label2.Text = "Cargando . .";
+                i++;
+            }
+            else
+            {
+                label2.Text = "Cargando . . .";
+                i = 1;
+            }
+        }
+
+        private void tick_2(object sender, EventArgs e)
         {
             this.Close();
         }
