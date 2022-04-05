@@ -87,7 +87,7 @@ namespace Practica_Git___Trello
             this.boton_B.TabIndex = 1;
             this.boton_B.Text = "B";
             this.boton_B.UseVisualStyleBackColor = false;
-            this.boton_B.Click += new System.EventHandler(this.boton_B_Click);
+
             // 
             // boton_A
             // 

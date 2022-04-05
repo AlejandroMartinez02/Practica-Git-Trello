@@ -48,10 +48,7 @@ namespace Practica_Git___Trello
 
         private void CambioTamaño(object sender, EventArgs e)
         {
-            boton_A.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
-            boton_B.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
-            boton_C.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
-            boton_D.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
+           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -75,11 +72,6 @@ namespace Practica_Git___Trello
             
             label1.Text = counter.ToString();
             counter -= 1;
-        }
-
-        private void boton_B_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
