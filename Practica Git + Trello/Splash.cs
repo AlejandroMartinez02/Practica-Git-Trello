@@ -16,7 +16,7 @@ namespace Practica_Git___Trello
         public splash()
         {
             InitializeComponent();
-            this.circularProgressBar1.Value = 0;
+            this.circularProgressBar1.Value = 0; 
 
 
         }
