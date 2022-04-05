@@ -16,7 +16,10 @@ namespace Practica_Git___Trello
         public Login()
         {
             InitializeComponent();
+            
         }
+
+
 
         private void btn_avanzar_Click(object sender, EventArgs e)
         {
@@ -27,9 +30,16 @@ namespace Practica_Git___Trello
             else
             {
                 nombreUsuario = tb_usuario.Text;
+
                 this.Close();
 
             }
         }
+
+        private void tb_usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

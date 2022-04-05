@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace Practica_Git___Trello
 {
@@ -16,6 +17,7 @@ namespace Practica_Git___Trello
         {
             InitializeComponent();
             this.circularProgressBar1.Value = 0;
+
 
         }
         private void ticks(object sender, EventArgs e)
@@ -31,6 +33,11 @@ namespace Practica_Git___Trello
         private void cerrar(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
