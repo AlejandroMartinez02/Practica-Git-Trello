@@ -39,5 +39,10 @@ namespace Practica_Git___Trello
         {
 
         }
+
+        private void circularProgressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

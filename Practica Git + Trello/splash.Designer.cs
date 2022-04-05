@@ -45,10 +45,9 @@ namespace Practica_Git___Trello
             // pb_logo
             // 
             this.pb_logo.BackgroundImage = global::Practica_Git___Trello.Properties.Resources.logo;
-            this.pb_logo.Location = new System.Drawing.Point(77, 42);
-            this.pb_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pb_logo.Location = new System.Drawing.Point(88, 56);
             this.pb_logo.Name = "pb_logo";
-            this.pb_logo.Size = new System.Drawing.Size(548, 147);
+            this.pb_logo.Size = new System.Drawing.Size(626, 196);
             this.pb_logo.TabIndex = 3;
             this.pb_logo.TabStop = false;
             // 
@@ -62,7 +61,8 @@ namespace Practica_Git___Trello
             this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.circularProgressBar1.InnerMargin = 0;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(311, 291);
+            this.circularProgressBar1.Location = new System.Drawing.Point(307, 279);
+            this.circularProgressBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.circularProgressBar1.MarqueeAnimationSpeed = 6000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -83,6 +83,7 @@ namespace Practica_Git___Trello
             this.circularProgressBar1.Text = "Cargando";
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(0);
             this.circularProgressBar1.Value = 68;
+            this.circularProgressBar1.Click += new System.EventHandler(this.circularProgressBar1_Click);
             // 
             // timer2
             // 
@@ -91,17 +92,16 @@ namespace Practica_Git___Trello
             // 
             // splash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(782, 453);
+            this.ClientSize = new System.Drawing.Size(782, 451);
             this.Controls.Add(this.circularProgressBar1);
             this.Controls.Add(this.pb_logo);
             this.Location = new System.Drawing.Point(80, 31);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(702, 385);
-            this.MinimumSize = new System.Drawing.Size(702, 385);
+            this.MaximumSize = new System.Drawing.Size(800, 498);
+            this.MinimumSize = new System.Drawing.Size(800, 498);
             this.Name = "splash";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
