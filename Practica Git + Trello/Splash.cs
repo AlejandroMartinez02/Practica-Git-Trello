@@ -20,9 +20,9 @@ namespace Practica_Git___Trello
 
         private void cambiarTamanyo(object sender, EventArgs e)
         {
-            //Comenta las cosas
-            label1.Font = new Font(label1.Font.Name, 25, label1.Font.Style);
             
+            label1.Font = new Font(label1.Font.Name, 25, label1.Font.Style);
+      
         }
 
         private void retornarTamanyo(object sender, EventArgs e)
@@ -36,7 +36,6 @@ namespace Practica_Git___Trello
             this.progressBar1.Increment(1);
             
         }
-        // aa
 
         int i = 1;
 
