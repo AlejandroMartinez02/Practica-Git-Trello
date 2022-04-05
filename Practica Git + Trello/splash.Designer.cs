@@ -30,49 +30,17 @@ namespace Practica_Git___Trello
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.pb_logo = new System.Windows.Forms.PictureBox();
+            this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(244, 360);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(315, 29);
-            this.progressBar1.Step = 20;
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar1.TabIndex = 1;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.ticks);
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 12000;
-            this.timer2.Tick += new System.EventHandler(this.tick_2);
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(343, 319);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 38);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Cargando";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // timer3
-            // 
-            this.timer3.Enabled = true;
-            this.timer3.Interval = 1000;
-            this.timer3.Tick += new System.EventHandler(this.tick_3);
             // 
             // pb_logo
             // 
@@ -83,19 +51,57 @@ namespace Practica_Git___Trello
             this.pb_logo.TabIndex = 3;
             this.pb_logo.TabStop = false;
             // 
+            // circularProgressBar1
+            // 
+            this.circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.circularProgressBar1.AnimationSpeed = 100;
+            this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.circularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.circularProgressBar1.InnerMargin = 0;
+            this.circularProgressBar1.InnerWidth = -1;
+            this.circularProgressBar1.Location = new System.Drawing.Point(307, 279);
+            this.circularProgressBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.circularProgressBar1.MarqueeAnimationSpeed = 6000;
+            this.circularProgressBar1.Name = "circularProgressBar1";
+            this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.circularProgressBar1.OuterMargin = -25;
+            this.circularProgressBar1.OuterWidth = 26;
+            this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.circularProgressBar1.ProgressWidth = 25;
+            this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.circularProgressBar1.Size = new System.Drawing.Size(150, 150);
+            this.circularProgressBar1.StartAngle = 270;
+            this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.circularProgressBar1.SubscriptText = "";
+            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.circularProgressBar1.SuperscriptText = "";
+            this.circularProgressBar1.TabIndex = 4;
+            this.circularProgressBar1.Text = "Cargando";
+            this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(0);
+            this.circularProgressBar1.Value = 68;
+            this.circularProgressBar1.Click += new System.EventHandler(this.circularProgressBar1_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.cerrar);
+            // 
             // splash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(782, 453);
+            this.ClientSize = new System.Drawing.Size(782, 451);
+            this.Controls.Add(this.circularProgressBar1);
             this.Controls.Add(this.pb_logo);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.progressBar1);
             this.Location = new System.Drawing.Point(80, 31);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(800, 500);
-            this.MinimumSize = new System.Drawing.Size(800, 500);
+            this.MaximumSize = new System.Drawing.Size(800, 498);
+            this.MinimumSize = new System.Drawing.Size(800, 498);
             this.Name = "splash";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -106,11 +112,9 @@ namespace Practica_Git___Trello
         }
 
         #endregion
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.PictureBox pb_logo;
+        private CircularProgressBar.CircularProgressBar circularProgressBar1;
+        private System.Windows.Forms.Timer timer2;
     }
 }

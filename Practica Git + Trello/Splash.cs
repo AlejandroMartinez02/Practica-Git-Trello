@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace Practica_Git___Trello
 {
@@ -15,39 +16,33 @@ namespace Practica_Git___Trello
         public splash()
         {
             InitializeComponent();
+            this.circularProgressBar1.Value = 0;
+
 
         }
         private void ticks(object sender, EventArgs e)
         {
-            progressBar1.ForeColor = Color.Blue;
-            this.progressBar1.Increment(1);
+            this.circularProgressBar1.Increment(1);
+            this.circularProgressBar1.Text = this.circularProgressBar1.Value.ToString() + "%";
+            if (this.circularProgressBar1.Value == this.circularProgressBar1.Maximum) {
+                this.timer2.Enabled = true;
+            }
             
         }
 
-
-        int i = 1;
-
-        private void tick_3(object sender, EventArgs e)
-        {
-            if(i == 1)
-            {
-                label2.Text = "Cargando .";
-                i++;
-            }else if(i == 2)
-            {
-                label2.Text = "Cargando . .";
-                i++;
-            }
-            else
-            {
-                label2.Text = "Cargando . . .";
-                i = 1;
-            }
-        }
-
-        private void tick_2(object sender, EventArgs e)
+        private void cerrar(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void circularProgressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
