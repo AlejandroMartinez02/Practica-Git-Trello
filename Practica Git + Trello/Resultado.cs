@@ -16,23 +16,6 @@ namespace Practica_Git___Trello
         {
             InitializeComponent();
         }
-
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-        
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            formPrincipal formP = new formPrincipal();
-
-            formP.Show();
-        }
-
         private void cerrarJuego(object sender, EventArgs e)
         {
             this.Close();
@@ -43,8 +26,16 @@ namespace Practica_Git___Trello
             this.Hide();
             Login form = new Login();
             form.ShowDialog();
-            formPrincipal otroIntento = new formPrincipal();
-            otroIntento.ShowDialog();
+            formPrincipal formP = new formPrincipal();
+            formP.ShowDialog();
+            this.Show();
+        }
+
+        private void reiniciar(object sender, EventArgs e)
+        {
+            this.Hide();
+            formPrincipal formP = new formPrincipal();
+            formP.ShowDialog();
             this.Show();
         }
     }
