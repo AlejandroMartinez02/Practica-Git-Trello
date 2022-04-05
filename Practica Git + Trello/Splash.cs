@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace Practica_Git___Trello
 {
@@ -15,6 +16,7 @@ namespace Practica_Git___Trello
         public splash()
         {
             InitializeComponent();
+
 
         }
         private void ticks(object sender, EventArgs e)
@@ -48,6 +50,11 @@ namespace Practica_Git___Trello
         private void tick_2(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

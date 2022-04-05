@@ -77,5 +77,9 @@ namespace Practica_Git___Trello
             counter -= 1;
         }
 
+        private void boton_B_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

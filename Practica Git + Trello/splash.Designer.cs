@@ -41,9 +41,10 @@ namespace Practica_Git___Trello
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(244, 360);
+            this.progressBar1.Location = new System.Drawing.Point(214, 270);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(315, 29);
+            this.progressBar1.Size = new System.Drawing.Size(276, 22);
             this.progressBar1.Step = 20;
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 1;
@@ -61,9 +62,9 @@ namespace Practica_Git___Trello
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(343, 319);
+            this.label2.Location = new System.Drawing.Point(300, 239);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 38);
+            this.label2.Size = new System.Drawing.Size(102, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Cargando";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,25 +78,27 @@ namespace Practica_Git___Trello
             // pb_logo
             // 
             this.pb_logo.BackgroundImage = global::Practica_Git___Trello.Properties.Resources.logo;
-            this.pb_logo.Location = new System.Drawing.Point(88, 56);
+            this.pb_logo.Location = new System.Drawing.Point(77, 42);
+            this.pb_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pb_logo.Name = "pb_logo";
-            this.pb_logo.Size = new System.Drawing.Size(626, 196);
+            this.pb_logo.Size = new System.Drawing.Size(548, 147);
             this.pb_logo.TabIndex = 3;
             this.pb_logo.TabStop = false;
             // 
             // splash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(782, 453);
+            this.ClientSize = new System.Drawing.Size(686, 346);
             this.Controls.Add(this.pb_logo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar1);
             this.Location = new System.Drawing.Point(80, 31);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(800, 500);
-            this.MinimumSize = new System.Drawing.Size(800, 500);
+            this.MaximumSize = new System.Drawing.Size(702, 385);
+            this.MinimumSize = new System.Drawing.Size(702, 385);
             this.Name = "splash";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
