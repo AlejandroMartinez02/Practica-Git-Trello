@@ -53,6 +53,7 @@ namespace Practica_Git___Trello
             
             if (aux)
             {
+
                 conn.Close();
                 this.Close();
             }
