@@ -88,7 +88,6 @@ namespace Practica_Git___Trello
             this.circularProgressBar1.Text = "Cargando";
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(0);
             this.circularProgressBar1.Value = 68;
-            this.circularProgressBar1.Click += new System.EventHandler(this.circularProgressBar1_Click);
             // 
             // splash
             // 

@@ -76,7 +76,6 @@ namespace Practica_Git___Trello
             this.tb_usuario.Name = "tb_usuario";
             this.tb_usuario.Size = new System.Drawing.Size(164, 27);
             this.tb_usuario.TabIndex = 3;
-            this.tb_usuario.TextChanged += new System.EventHandler(this.tb_usuario_TextChanged);
             // 
             // Login
             // 
