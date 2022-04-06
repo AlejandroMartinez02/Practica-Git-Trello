@@ -40,7 +40,7 @@ namespace Practica_Git___Trello
             NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
             DataTable table = new DataTable();
             datos.Fill(table);
-
+            int x;
             return table;
         }
 
