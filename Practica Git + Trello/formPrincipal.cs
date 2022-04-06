@@ -14,20 +14,12 @@ namespace Practica_Git___Trello
 {
     public partial class formPrincipal : Form
     {
-        String rutaDelArchivo = "./datos.txt";
 
         int counter = 30;
 
         public formPrincipal()
         {
             InitializeComponent();
-            boton_A.BackColor = ColorTranslator.FromHtml("#e21b3c");
-            boton_B.BackColor = ColorTranslator.FromHtml("#1268cd");
-            boton_C.BackColor = ColorTranslator.FromHtml("#d89e00");
-            boton_D.BackColor = ColorTranslator.FromHtml("#2a8f0d");
-
-            this.BackColor = ColorTranslator.FromHtml("#f2f2f2");
-
             boton_A.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             boton_B.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             boton_C.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
