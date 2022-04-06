@@ -74,16 +74,16 @@ namespace Practica_Git___Trello
             // 
             this.tb_usuario.Location = new System.Drawing.Point(284, 316);
             this.tb_usuario.Name = "tb_usuario";
-            this.tb_usuario.Size = new System.Drawing.Size(164, 23);
+            this.tb_usuario.Size = new System.Drawing.Size(164, 27);
             this.tb_usuario.TabIndex = 3;
             this.tb_usuario.TextChanged += new System.EventHandler(this.tb_usuario_TextChanged);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(193)))));
+            this.ClientSize = new System.Drawing.Size(782, 453);
             this.Controls.Add(this.tb_usuario);
             this.Controls.Add(this.btn_avanzar);
             this.Controls.Add(this.lbl_nombre);

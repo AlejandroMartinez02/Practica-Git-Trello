@@ -43,11 +43,11 @@ namespace Practica_Git___Trello
             // boton_D
             // 
             this.boton_D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.boton_D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.boton_D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(123)))), ((int)(((byte)(166)))));
             this.boton_D.FlatAppearance.BorderSize = 0;
             this.boton_D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_D.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.boton_D.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.boton_D.ForeColor = System.Drawing.SystemColors.Desktop;
             this.boton_D.Location = new System.Drawing.Point(382, 99);
             this.boton_D.Margin = new System.Windows.Forms.Padding(0);
             this.boton_D.Name = "boton_D";
@@ -59,11 +59,11 @@ namespace Practica_Git___Trello
             // boton_C
             // 
             this.boton_C.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.boton_C.BackColor = System.Drawing.Color.Yellow;
+            this.boton_C.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(186)))), ((int)(((byte)(150)))));
             this.boton_C.FlatAppearance.BorderSize = 0;
             this.boton_C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_C.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.boton_C.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.boton_C.ForeColor = System.Drawing.SystemColors.Desktop;
             this.boton_C.Location = new System.Drawing.Point(0, 99);
             this.boton_C.Margin = new System.Windows.Forms.Padding(0);
             this.boton_C.Name = "boton_C";
@@ -75,11 +75,11 @@ namespace Practica_Git___Trello
             // boton_B
             // 
             this.boton_B.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.boton_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.boton_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(193)))), ((int)(((byte)(217)))));
             this.boton_B.FlatAppearance.BorderSize = 0;
             this.boton_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_B.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.boton_B.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.boton_B.ForeColor = System.Drawing.SystemColors.Desktop;
             this.boton_B.Location = new System.Drawing.Point(382, 0);
             this.boton_B.Margin = new System.Windows.Forms.Padding(0);
             this.boton_B.Name = "boton_B";
@@ -90,12 +90,12 @@ namespace Practica_Git___Trello
             // 
             // boton_A
             // 
-            this.boton_A.BackColor = System.Drawing.Color.Brown;
+            this.boton_A.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(158)))), ((int)(((byte)(76)))));
             this.boton_A.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.boton_A.FlatAppearance.BorderSize = 0;
             this.boton_A.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_A.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.boton_A.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.boton_A.ForeColor = System.Drawing.SystemColors.Desktop;
             this.boton_A.Location = new System.Drawing.Point(0, 0);
             this.boton_A.Margin = new System.Windows.Forms.Padding(0);
             this.boton_A.Name = "boton_A";
@@ -123,7 +123,7 @@ namespace Practica_Git___Trello
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(193)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(0, 0);
@@ -143,9 +143,11 @@ namespace Practica_Git___Trello
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(193)))));
             this.ClientSize = new System.Drawing.Size(800, 536);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "formPrincipal";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.formPrincipal_Load);
