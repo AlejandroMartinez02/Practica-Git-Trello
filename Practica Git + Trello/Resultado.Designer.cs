@@ -101,7 +101,6 @@ namespace Practica_Git___Trello
             this.Top1.Size = new System.Drawing.Size(47, 20);
             this.Top1.TabIndex = 4;
             this.Top1.Text = "TOP 1";
-            this.Top1.Click += new System.EventHandler(this.label2_Click);
             // 
             // Top2
             // 
