@@ -13,7 +13,7 @@ namespace Practica_Git___Trello
 {
     public partial class Login : Form
     {
-        
+
         NpgsqlConnection conn = new NpgsqlConnection(@"Host=ec2-52-48-159-67.eu-west-1.compute.amazonaws.com;Username=hipogxdbddiilb;Password=54dafab8b0782f75f681da9e42410f32bddd82a201c20678ffafb97c4bfa6339;Database=dfcnacrkg93eqm;");
 
         public Login()

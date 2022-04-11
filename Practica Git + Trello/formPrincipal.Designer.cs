@@ -37,6 +37,9 @@ namespace Practica_Git___Trello
             this.panel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +58,7 @@ namespace Practica_Git___Trello
             this.boton_D.TabIndex = 3;
             this.boton_D.Text = "D";
             this.boton_D.UseVisualStyleBackColor = false;
+            this.boton_D.Click += new System.EventHandler(this.responder);
             // 
             // boton_C
             // 
@@ -71,6 +75,7 @@ namespace Practica_Git___Trello
             this.boton_C.TabIndex = 2;
             this.boton_C.Text = "C";
             this.boton_C.UseVisualStyleBackColor = false;
+            this.boton_C.Click += new System.EventHandler(this.responder);
             // 
             // boton_B
             // 
@@ -87,6 +92,7 @@ namespace Practica_Git___Trello
             this.boton_B.TabIndex = 1;
             this.boton_B.Text = "B";
             this.boton_B.UseVisualStyleBackColor = false;
+            this.boton_B.Click += new System.EventHandler(this.responder);
             // 
             // boton_A
             // 
@@ -103,7 +109,7 @@ namespace Practica_Git___Trello
             this.boton_A.TabIndex = 0;
             this.boton_A.Text = "A";
             this.boton_A.UseVisualStyleBackColor = false;
-            this.boton_A.Click += new System.EventHandler(this.boton_A_Click);
+            this.boton_A.Click += new System.EventHandler(this.responder);
             // 
             // panel1
             // 
@@ -119,14 +125,14 @@ namespace Practica_Git___Trello
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 209);
             this.panel1.TabIndex = 5;
-            this.panel1.SizeChanged += new System.EventHandler(this.CambioTamaño);
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(193)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(0, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(800, 91);
             this.label1.TabIndex = 6;
@@ -137,7 +143,35 @@ namespace Practica_Git___Trello
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.ticks);
+            this.timer1.Tick += new System.EventHandler(this.contador);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.contador2);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(0, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(800, 25);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Pregunta 1";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(702, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 52);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "30";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // formPrincipal
             // 
@@ -145,12 +179,13 @@ namespace Practica_Git___Trello
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(193)))));
             this.ClientSize = new System.Drawing.Size(800, 536);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "formPrincipal";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.formPrincipal_Load);
             this.SizeChanged += new System.EventHandler(this.cambiarTamanyo);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -166,6 +201,9 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.FlowLayoutPanel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

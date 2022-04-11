@@ -59,6 +59,7 @@ namespace Practica_Git___Trello
             }
             else
             {
+                conn.Close();
                 Application.Exit();
             };
         }
