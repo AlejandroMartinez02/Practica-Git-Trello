@@ -29,6 +29,7 @@ namespace Practica_Git___Trello
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.boton_D = new System.Windows.Forms.Button();
             this.boton_C = new System.Windows.Forms.Button();
             this.boton_B = new System.Windows.Forms.Button();

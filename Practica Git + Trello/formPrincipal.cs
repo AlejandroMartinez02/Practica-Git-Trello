@@ -32,7 +32,7 @@ namespace Practica_Git___Trello
             boton_D.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             conn.Open();
 
-           
+
 
             //Iteramos hasta que la lista tenga 10 elementos
             while (numeros.Count < 10)
@@ -94,10 +94,8 @@ namespace Practica_Git___Trello
                 NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + preguntas[0] + ", A ," + respuestaCorrecta + ", " + false + ", " + counter + ", " + 0 + "); ", conn);
                 NpgsqlDataReader nda = comm.ExecuteReader();
             }
-            
-           
-        }
 
+        }
         private int encontrarIdUsuario()
         {
             NpgsqlCommand usu = new NpgsqlCommand("SELECT MAX(id_usuario) FROM usuarios", conn);
