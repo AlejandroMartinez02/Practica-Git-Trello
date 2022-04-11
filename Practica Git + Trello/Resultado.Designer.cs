@@ -214,6 +214,8 @@ namespace Practica_Git___Trello
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Top6);
             this.Controls.Add(this.Top5);
