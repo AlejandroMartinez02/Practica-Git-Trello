@@ -31,9 +31,7 @@ namespace Practica_Git___Trello
                 label3.Text = conn.State.ToString();
             }
 
-            String SelectN = "SELECT nombre, id_usuario FROM usuario";
-            String SelectPun = "SELECT puntos FROM responder";
-            String SelectAci = "SELECT acierto FROM responder";
+            String SelectN = "SELECT u.nombre, u.id_usuario, r.puntos, r.acierto FROM usuario u, responder r WHERE r.id_usuario = u.id_usuario";
             NpgsqlCommand comm = new NpgsqlCommand(SelectN, conn);
             NpgsqlDataReader nda = comm.ExecuteReader();
             ArrayList NameId = new ArrayList();
@@ -42,36 +40,58 @@ namespace Practica_Git___Trello
             //
             while (nda.Read())
             {
-                String name = nda["nombre"].ToString();
+                String name = nda["u.nombre"].ToString();  //Aqui si sale error es porque a lo mejor le falta o le sobra (u.* o r.*)
                 String id = nda["id_usuario"].ToString();
-                String punt = nda["puntos"].ToString();
+                String punt = nda["r.puntos"].ToString();
                 String acierto = nda["acierto"].ToString();
                 NameId.Add(name);
                 Puntos.Add(punt);
                 Acierto.Add(acierto);
             }
 
-            int max = 0, pos1 = 0;
+            int p1=0,pos1=0,p2=0,pos2=0,pos3=0,pos4=0,pos5=0,pos6=0,p3=0,p4=0,p5=0,p6=0;
 
-            for(int i =0; i < Acierto.Count; i++)
+            for(int i =0; i < Puntos.Count; i++)
             {
-                if(Convert.ToInt32(Acierto[i].ToString()) > max)
+                if(Convert.ToInt32(Puntos[i].ToString()) > p1)
                 {
-                    max = Convert.ToInt32(Acierto[i].ToString());
+                    p1 = Convert.ToInt32(Puntos[i].ToString());
                     pos1 = i;
                 }
-
-
-
+                if (Convert.ToInt32(Puntos[i].ToString()) > p2 & Convert.ToInt32(Puntos[i].ToString()) < p1)
+                {
+                    p2 = Convert.ToInt32(Puntos[i].ToString());
+                    pos2 = i;
+                }
+                if (Convert.ToInt32(Puntos[i].ToString()) > p3 & Convert.ToInt32(Puntos[i].ToString()) < p2)
+                {
+                    p3 = Convert.ToInt32(Puntos[i].ToString());
+                    pos3 = i;
+                }
+                if (Convert.ToInt32(Puntos[i].ToString()) > p4 & Convert.ToInt32(Puntos[i].ToString()) < p3)
+                {
+                    p4 = Convert.ToInt32(Puntos[i].ToString());
+                    pos4 = i;
+                }
+                if (Convert.ToInt32(Puntos[i].ToString()) > p5 & Convert.ToInt32(Puntos[i].ToString()) < p4)
+                {
+                    p5 = Convert.ToInt32(Puntos[i].ToString());
+                    pos5 = i;
+                }
+                if (Convert.ToInt32(Puntos[i].ToString()) > p6 & Convert.ToInt32(Puntos[i].ToString()) < p5)
+                {
+                    p6 = Convert.ToInt32(Puntos[i].ToString());
+                    pos6 = i;
+                }
             }
-            
-            
+
+
             Top1.Text = NameId[pos1].ToString() + "///" + Puntos[pos1].ToString() + "///" + Acierto[pos1].ToString();
-            Top2.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
-            Top3.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
-            Top4.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
-            Top5.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
-            Top6.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString(); 
+            Top2.Text = NameId[pos2].ToString() + "///" + Puntos[pos2].ToString() + "///" + Acierto[pos2].ToString();
+            Top3.Text = NameId[pos3].ToString() + "///" + Puntos[pos3].ToString() + "///" + Acierto[pos3].ToString();
+            Top4.Text = NameId[pos4].ToString() + "///" + Puntos[pos4].ToString() + "///" + Acierto[pos4].ToString();
+            Top5.Text = NameId[pos5].ToString() + "///" + Puntos[pos5].ToString() + "///" + Acierto[pos5].ToString();
+            Top6.Text = NameId[pos6].ToString() + "///" + Puntos[pos6].ToString() + "///" + Acierto[pos6].ToString(); 
 
         }
 
