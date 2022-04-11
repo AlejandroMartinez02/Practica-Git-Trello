@@ -104,7 +104,6 @@ namespace Practica_Git___Trello
             this.Top1.Size = new System.Drawing.Size(37, 15);
             this.Top1.TabIndex = 4;
             this.Top1.Text = "TOP 1";
-            this.Top1.Click += new System.EventHandler(this.label2_Click);
             // 
             // Top2
             // 
@@ -215,6 +214,8 @@ namespace Practica_Git___Trello
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Top6);
             this.Controls.Add(this.Top5);
