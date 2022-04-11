@@ -35,8 +35,10 @@ namespace Practica_Git___Trello
             this.boton_B = new System.Windows.Forms.Button();
             this.boton_A = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_pregunta = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbl_tiempo = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,7 +105,6 @@ namespace Practica_Git___Trello
             this.boton_A.TabIndex = 0;
             this.boton_A.Text = "A";
             this.boton_A.UseVisualStyleBackColor = false;
-            this.boton_A.Click += new System.EventHandler(this.boton_A_Click);
             // 
             // panel1
             // 
@@ -119,19 +120,18 @@ namespace Practica_Git___Trello
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 209);
             this.panel1.TabIndex = 5;
-            this.panel1.SizeChanged += new System.EventHandler(this.CambioTamaño);
             // 
-            // label1
+            // lbl_pregunta
             // 
-            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(800, 91);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "1 ¿Cual es la velocidad de la luz?";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_pregunta.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_pregunta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_pregunta.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_pregunta.Location = new System.Drawing.Point(0, 0);
+            this.lbl_pregunta.Name = "lbl_pregunta";
+            this.lbl_pregunta.Size = new System.Drawing.Size(800, 91);
+            this.lbl_pregunta.TabIndex = 6;
+            this.lbl_pregunta.Text = "1 ¿Cual es la velocidad de la luz?";
+            this.lbl_pregunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer1
             // 
@@ -139,21 +139,37 @@ namespace Practica_Git___Trello
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.ticks);
             // 
+            // lbl_tiempo
+            // 
+            this.lbl_tiempo.AutoSize = true;
+            this.lbl_tiempo.Location = new System.Drawing.Point(12, 112);
+            this.lbl_tiempo.Name = "lbl_tiempo";
+            this.lbl_tiempo.Size = new System.Drawing.Size(17, 20);
+            this.lbl_tiempo.TabIndex = 7;
+            this.lbl_tiempo.Text = "0";
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.ticks2);
+            // 
             // formPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 536);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_tiempo);
+            this.Controls.Add(this.lbl_pregunta);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "formPrincipal";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.formPrincipal_Load);
             this.SizeChanged += new System.EventHandler(this.cambiarTamanyo);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -164,8 +180,10 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.Button boton_B;
         private System.Windows.Forms.Button boton_A;
         private System.Windows.Forms.FlowLayoutPanel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_pregunta;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbl_tiempo;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
