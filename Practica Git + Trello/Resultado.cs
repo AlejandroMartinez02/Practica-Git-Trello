@@ -64,9 +64,9 @@ namespace Practica_Git___Trello
 
 
             }
-            
-            
-            Top1.Text = NameId[pos1].ToString() + "///" + Puntos[pos1].ToString() + "///" + Acierto[pos1].ToString();
+
+
+            Top1.Text = NameId[pos1].ToString() + "///";  //Puntos[pos1].ToString() + "///" + //Acierto[pos1].ToString();
             Top2.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
             Top3.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
             Top4.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
@@ -112,16 +112,6 @@ namespace Practica_Git___Trello
             formPrincipal formP = new formPrincipal();
             formP.ShowDialog();
             this.Show();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

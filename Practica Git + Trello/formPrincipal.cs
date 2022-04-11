@@ -17,7 +17,11 @@ namespace Practica_Git___Trello
     public partial class formPrincipal : Form
     {
 
-        int counter = 30;
+        public int counter = 30;
+        public NpgsqlConnection conn = new NpgsqlConnection(@"Host=ec2-34-246-227-219.eu-west-1.compute.amazonaws.com;Username=cejtrhepkvtxov;Password=78988b91e1724a5a9ec6e0447a558529359ffe42e3c2cbf1e03ec1cda2abbac8;Database=d9d9c375se63vc;");
+        ArrayList numeros = new ArrayList();
+        ArrayList preguntas = new ArrayList();
+        ArrayList respuestas = new ArrayList();
 
         public formPrincipal()
         {
@@ -26,10 +30,9 @@ namespace Practica_Git___Trello
             boton_B.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             boton_C.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             boton_D.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
-
-            NpgsqlConnection conn = new NpgsqlConnection(@"Host=ec2-34-246-227-219.eu-west-1.compute.amazonaws.com;Username=cejtrhepkvtxov;Password=78988b91e1724a5a9ec6e0447a558529359ffe42e3c2cbf1e03ec1cda2abbac8;Database=d9d9c375se63vc;");
             conn.Open();
-            ArrayList numeros = new ArrayList();
+
+           
 
             //Iteramos hasta que la lista tenga 10 elementos
             while (numeros.Count < 10)
@@ -43,10 +46,6 @@ namespace Practica_Git___Trello
                     numeros.Add(numeroAleatorio);
                 }
             }
-
-            ArrayList preguntas = new ArrayList();
-            ArrayList respuestas = new ArrayList();
-
 
             foreach (int n in numeros)
             {
@@ -67,15 +66,9 @@ namespace Practica_Git___Trello
                 }
                 nda.Close();
             }
-            
-        }
 
-   
-
-        private void ticks(object sender, EventArgs e)
-        {
             
-         
+            
         }
 
         private void cambiarTamanyo(object sender, EventArgs e)
@@ -86,11 +79,37 @@ namespace Practica_Git___Trello
             boton_D.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
         }
 
-     
-        private void ticks2(object sender, EventArgs e)
+        private void clickBotonA(object sender, EventArgs e)
         {
-           
+            int usuario = encontrarIdUsuario();
+            String respuestaCorrecta = encontrarRespuestaCorrecta();
 
+            if (respuestaCorrecta.Equals("A"))
+            {
+                NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + preguntas[0] + ", A ," + respuestaCorrecta + ", " + true + ", " + counter + ", " + 20 + "); ", conn);
+                NpgsqlDataReader nda = comm.ExecuteReader();
+            }
+            else
+            {
+                NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + preguntas[0] + ", A ," + respuestaCorrecta + ", " + false + ", " + counter + ", " + 0 + "); ", conn);
+                NpgsqlDataReader nda = comm.ExecuteReader();
+            }
+            
+           
+        }
+
+        private int encontrarIdUsuario()
+        {
+            NpgsqlCommand usu = new NpgsqlCommand("SELECT MAX(id_usuario) FROM usuarios", conn);
+            NpgsqlDataReader commUsu = usu.ExecuteReader();
+            return int.Parse(commUsu.ToString());
+        }
+
+        private String encontrarRespuestaCorrecta()
+        {
+            NpgsqlCommand pregunta = new NpgsqlCommand("SELECT r_correcta FROM preguntas WHERE id_pregunta = " + preguntas[0]);
+            NpgsqlDataReader commPreg = pregunta.ExecuteReader();
+            return commPreg.ToString();
         }
     }
 }
