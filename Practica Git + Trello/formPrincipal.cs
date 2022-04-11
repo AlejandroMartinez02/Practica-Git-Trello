@@ -19,8 +19,7 @@ namespace Practica_Git___Trello
 
         decimal cont1 = 30;
         decimal cont2 = 5;
-        int n_pregunta = 0;
-        string[] preguntas = { "Pregunta 1", "Pregunta 2", "Pregunta 3", "Pregunta 4", "Pregunta 5", "Pregunta 6", "Pregunta 7", "Pregunta 8", "Pregunta 9", "Pregunta 10" };
+        int n_pregunta = 30;
         public int counter = 30;
         public NpgsqlConnection conn = new NpgsqlConnection(@"Host=ec2-34-246-227-219.eu-west-1.compute.amazonaws.com;Username=cejtrhepkvtxov;Password=78988b91e1724a5a9ec6e0447a558529359ffe42e3c2cbf1e03ec1cda2abbac8;Database=d9d9c375se63vc;");
         ArrayList numeros = new ArrayList();
@@ -34,12 +33,12 @@ namespace Practica_Git___Trello
             boton_B.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             boton_C.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             boton_D.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
-            label2.Text = preguntas[n_pregunta];
+
 
             NpgsqlConnection conn = new NpgsqlConnection(@"Host=ec2-34-246-227-219.eu-west-1.compute.amazonaws.com;Username=cejtrhepkvtxov;Password=78988b91e1724a5a9ec6e0447a558529359ffe42e3c2cbf1e03ec1cda2abbac8;Database=d9d9c375se63vc;");
             conn.Open();
 
-           
+
 
             //Iteramos hasta que la lista tenga 10 elementos
             while (numeros.Count < 10)
@@ -73,7 +72,9 @@ namespace Practica_Git___Trello
                 }
                 nda.Close();
             }
-            
+
+           
+
         }
 
 
@@ -131,7 +132,7 @@ namespace Practica_Git___Trello
                 }
                 else
                 {
-                    label2.Text = preguntas[n_pregunta];
+                    label2.Text = preguntas[n_pregunta].ToString() ;
                     boton_A.Click += responder;
                     boton_B.Click += responder;
                     boton_C.Click += responder;
@@ -141,6 +142,14 @@ namespace Practica_Git___Trello
                     cont1 = 30;
                     label3.Text = cont1.ToString();
                 }
+            }
+            else
+            {
+                label3.Text = cont2.ToString();
+            }
+
+        }
+
         private void clickBotonA(object sender, EventArgs e)
         {
             int usuario = encontrarIdUsuario();
@@ -156,10 +165,8 @@ namespace Practica_Git___Trello
                 NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + preguntas[0] + ", A ," + respuestaCorrecta + ", " + false + ", " + counter + ", " + 0 + "); ", conn);
                 NpgsqlDataReader nda = comm.ExecuteReader();
             }
-            
-           
-        }
 
+        }
         private int encontrarIdUsuario()
         {
             NpgsqlCommand usu = new NpgsqlCommand("SELECT MAX(id_usuario) FROM usuarios", conn);
@@ -173,11 +180,5 @@ namespace Practica_Git___Trello
             NpgsqlDataReader commPreg = pregunta.ExecuteReader();
             return commPreg.ToString();
         }
-            }
-            else
-            {
-                label3.Text = cont2.ToString();
-            }
-        }
     }
-}
+    }

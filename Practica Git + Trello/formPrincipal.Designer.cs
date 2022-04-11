@@ -29,6 +29,7 @@ namespace Practica_Git___Trello
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.boton_D = new System.Windows.Forms.Button();
             this.boton_C = new System.Windows.Forms.Button();
             this.boton_B = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@ namespace Practica_Git___Trello
             this.lbl_pregunta = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -127,58 +129,37 @@ namespace Practica_Git___Trello
             // 
             // lbl_pregunta
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(193)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.lbl_pregunta.Location = new System.Drawing.Point(0, 0);
+            this.lbl_pregunta.Name = "lbl_pregunta";
+            this.lbl_pregunta.Size = new System.Drawing.Size(100, 23);
+            this.lbl_pregunta.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(75, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(800, 91);
+            this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "1 ¿Cual es la velocidad de la luz?";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.contador);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.contador2);
+            this.label1.Text = "label1";
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(0, 9);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(257, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(800, 25);
+            this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Pregunta 1";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Text = "label2";
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(702, 76);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(104, 158);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 52);
+            this.label3.Size = new System.Drawing.Size(50, 20);
             this.label3.TabIndex = 8;
-            this.label3.Text = "30";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_tiempo
-            // 
-            this.lbl_tiempo.AutoSize = true;
-            this.lbl_tiempo.Location = new System.Drawing.Point(12, 112);
-            this.lbl_tiempo.Name = "lbl_tiempo";
-            this.lbl_tiempo.Size = new System.Drawing.Size(17, 20);
-            this.lbl_tiempo.TabIndex = 7;
-            this.lbl_tiempo.Text = "0";
+            this.label3.Text = "label3";
             // 
             // formPrincipal
             // 
@@ -186,6 +167,8 @@ namespace Practica_Git___Trello
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 536);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -207,6 +190,10 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.FlowLayoutPanel panel1;
         private System.Windows.Forms.Label lbl_pregunta;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
