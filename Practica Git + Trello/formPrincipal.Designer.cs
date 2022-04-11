@@ -29,16 +29,13 @@ namespace Practica_Git___Trello
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.boton_D = new System.Windows.Forms.Button();
             this.boton_C = new System.Windows.Forms.Button();
             this.boton_B = new System.Windows.Forms.Button();
             this.boton_A = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_pregunta = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbl_tiempo = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +102,7 @@ namespace Practica_Git___Trello
             this.boton_A.TabIndex = 0;
             this.boton_A.Text = "A";
             this.boton_A.UseVisualStyleBackColor = false;
+            this.boton_A.Click += new System.EventHandler(this.clickBotonA);
             // 
             // panel1
             // 
@@ -133,12 +131,6 @@ namespace Practica_Git___Trello
             this.lbl_pregunta.Text = "1 ¿Cual es la velocidad de la luz?";
             this.lbl_pregunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.ticks);
-            // 
             // lbl_tiempo
             // 
             this.lbl_tiempo.AutoSize = true;
@@ -147,12 +139,6 @@ namespace Practica_Git___Trello
             this.lbl_tiempo.Size = new System.Drawing.Size(17, 20);
             this.lbl_tiempo.TabIndex = 7;
             this.lbl_tiempo.Text = "0";
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.ticks2);
             // 
             // formPrincipal
             // 
@@ -181,9 +167,7 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.Button boton_A;
         private System.Windows.Forms.FlowLayoutPanel panel1;
         private System.Windows.Forms.Label lbl_pregunta;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lbl_tiempo;
-        private System.Windows.Forms.Timer timer2;
     }
 }
 
