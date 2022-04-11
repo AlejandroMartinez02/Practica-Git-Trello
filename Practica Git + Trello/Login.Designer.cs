@@ -58,7 +58,7 @@ namespace Practica_Git___Trello
             // 
             // btn_avanzar
             // 
-            this.btn_avanzar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(143)))), ((int)(((byte)(176)))));
+            this.btn_avanzar.BackColor = System.Drawing.Color.SlateBlue;
             this.btn_avanzar.FlatAppearance.BorderSize = 2;
             this.btn_avanzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_avanzar.ForeColor = System.Drawing.Color.White;
@@ -81,7 +81,7 @@ namespace Practica_Git___Trello
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(193)))));
             this.ClientSize = new System.Drawing.Size(782, 453);
             this.Controls.Add(this.tb_usuario);
             this.Controls.Add(this.btn_avanzar);
