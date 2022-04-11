@@ -93,6 +93,7 @@ namespace Practica_Git___Trello
             Top5.Text = NameId[pos5].ToString() + "///" + Puntos[pos5].ToString() + "///" + Acierto[pos5].ToString();
             Top6.Text = NameId[pos6].ToString() + "///" + Puntos[pos6].ToString() + "///" + Acierto[pos6].ToString(); 
 
+
         }
 
 
