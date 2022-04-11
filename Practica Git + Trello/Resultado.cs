@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,27 +24,59 @@ namespace Practica_Git___Trello
             try
             {
                 conn.Open();
-                label2.Text = conn.State.ToString();
+                label3.Text = conn.State.ToString();
             }
             catch (Exception ex)
             {
-                label2.Text = conn.State.ToString();
+                label3.Text = conn.State.ToString();
             }
 
+            String SelectN = "SELECT nombre, id_usuario FROM usuario";
+            String SelectPun = "SELECT puntos FROM responder";
+            String SelectAci = "SELECT acierto FROM responder";
+            NpgsqlCommand comm = new NpgsqlCommand(SelectN, conn);
+            NpgsqlDataReader nda = comm.ExecuteReader();
+            ArrayList NameId = new ArrayList();
+            ArrayList Puntos = new ArrayList();
+            ArrayList Acierto = new ArrayList();
+            //
+            while (nda.Read())
+            {
+                String name = nda["nombre"].ToString();
+                String id = nda["id_usuario"].ToString();
+                String punt = nda["puntos"].ToString();
+                String acierto = nda["acierto"].ToString();
+                NameId.Add(name);
+                Puntos.Add(punt);
+                Acierto.Add(acierto);
+            }
+
+            int max = 0, pos1 = 0;
+
+            for(int i =0; i < Acierto.Count; i++)
+            {
+                if(Convert.ToInt32(Acierto[i].ToString()) > max)
+                {
+                    max = Convert.ToInt32(Acierto[i].ToString());
+                    pos1 = i;
+                }
+
+
+
+            }
             
+            
+            Top1.Text = NameId[pos1].ToString() + "///" + Puntos[pos1].ToString() + "///" + Acierto[pos1].ToString();
+            Top2.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
+            Top3.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
+            Top4.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
+            Top5.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
+            Top6.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString(); 
+
         }
 
-        public DataTable SelectT(string nom)
-        {
-            string cons = "select * from \"Usuario\" ";
-            NpgsqlCommand conector = new NpgsqlCommand(cons, conn);
-            NpgsqlDataAdapter datos = new NpgsqlDataAdapter(conector);
-            DataTable table = new DataTable();
-            datos.Fill(table);
-            int x;
-            return table;
-        }
 
+        
 
         public NpgsqlCommand GetCommand()
         {
@@ -79,6 +112,16 @@ namespace Practica_Git___Trello
             formPrincipal formP = new formPrincipal();
             formP.ShowDialog();
             this.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
