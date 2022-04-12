@@ -69,5 +69,25 @@ namespace Practica_Git___Trello.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_three_dimensional_podium_dimensional_podium {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-three-dimensional-podium-dimensional-podium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap podio770x420 {
+            get {
+                object obj = ResourceManager.GetObject("podio770x420", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
