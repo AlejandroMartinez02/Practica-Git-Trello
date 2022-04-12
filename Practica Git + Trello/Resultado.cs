@@ -21,16 +21,7 @@ namespace Practica_Git___Trello
         {
             InitializeComponent();
 
-            try
-            {
-                conn.Open();
-                label3.Text = conn.State.ToString();
-            }
-            catch (Exception ex)
-            {
-                label3.Text = conn.State.ToString();
-            }
-
+          
             String SelectN = "SELECT nombre, id_usuario FROM usuario";
             String SelectPun = "SELECT puntos FROM responder";
             String SelectAci = "SELECT acierto FROM responder";

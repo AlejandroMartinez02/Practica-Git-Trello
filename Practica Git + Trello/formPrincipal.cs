@@ -17,11 +17,15 @@ namespace Practica_Git___Trello
     public partial class formPrincipal : Form
     {
 
-        public int counter = 30;
+        private decimal cont1 = 30;
+        private decimal cont2 = 5;
+        private int n_pregunta = 0;
+        private int n_respuesta = 0;
+        private int counter = 30;
         public NpgsqlConnection conn = new NpgsqlConnection(@"Host=ec2-34-246-227-219.eu-west-1.compute.amazonaws.com;Username=cejtrhepkvtxov;Password=78988b91e1724a5a9ec6e0447a558529359ffe42e3c2cbf1e03ec1cda2abbac8;Database=d9d9c375se63vc;");
-        ArrayList numeros = new ArrayList();
-        ArrayList preguntas = new ArrayList();
-        ArrayList respuestas = new ArrayList();
+        public static ArrayList numeros = new ArrayList();
+        public static ArrayList preguntas = new ArrayList();
+        public static ArrayList respuestas = new ArrayList();
 
         public formPrincipal()
         {
@@ -66,9 +70,20 @@ namespace Practica_Git___Trello
                 }
                 nda.Close();
             }
+            lbl_pregunta.Text = preguntas[n_pregunta].ToString();
+            boton_A.Text = respuestas[n_respuesta].ToString();
+            n_respuesta++;
+            boton_B.Text = respuestas[n_respuesta].ToString();
+            n_respuesta++;
+            boton_C.Text = respuestas[n_respuesta].ToString();
+            n_respuesta++;
+            boton_D.Text = respuestas[n_respuesta].ToString();
+            n_respuesta++;
 
-            
-            
+
+
+
+
         }
 
         private void cambiarTamanyo(object sender, EventArgs e)
@@ -77,6 +92,73 @@ namespace Practica_Git___Trello
             boton_B.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             boton_C.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             boton_D.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
+        }
+
+        private void responder(object sender, EventArgs e)
+        {
+            decimal resultado = Math.Ceiling(cont1 / 3);
+            cont1 = 0;
+        }
+
+        private void contador(object sender, EventArgs e)
+        {
+            cont1 -= 1;
+            if (cont1 < 0)
+            {
+                n_pregunta++;
+                boton_A.Click -= responder;
+                boton_B.Click -= responder;
+                boton_C.Click -= responder;
+                boton_D.Click -= responder;
+                timer1.Enabled = false;
+                timer2.Enabled = true;
+                cont2 = 5;
+                label3.Text = cont2.ToString();
+            }
+            else
+            {
+                label3.Text = cont1.ToString();
+            }
+        }
+
+        private void contador2(object sender, EventArgs e)
+        {
+            cont2 -= 1;
+            if (cont2 < 0)
+            {
+                if (n_pregunta == 10)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    lbl_numPreg.Text = "Pregunta " + (n_pregunta + 1);
+                    lbl_pregunta.Text = preguntas[n_pregunta].ToString();
+                    boton_A.Text = respuestas[n_respuesta].ToString();
+                    n_respuesta++;
+                    boton_B.Text = respuestas[n_respuesta].ToString();
+                    n_respuesta++;
+                    boton_C.Text = respuestas[n_respuesta].ToString();
+                    n_respuesta++;
+                    boton_D.Text = respuestas[n_respuesta].ToString();
+                    n_respuesta++;
+                    boton_A.Click += responder;
+                    boton_B.Click += responder;
+                    boton_C.Click += responder;
+                    boton_D.Click += responder;
+                    timer2.Enabled = false;
+                    timer1.Enabled = true;
+                    cont1 = 30;
+                    label3.Text = cont1.ToString();
+                    
+        
+                }
+            }
+            else
+            {
+                label3.Text = cont2.ToString();
+            }
+
         }
 
         private void clickBotonA(object sender, EventArgs e)

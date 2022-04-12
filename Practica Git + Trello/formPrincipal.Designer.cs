@@ -35,7 +35,10 @@ namespace Practica_Git___Trello
             this.boton_A = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_pregunta = new System.Windows.Forms.Label();
-            this.lbl_tiempo = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_numPreg = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +48,7 @@ namespace Practica_Git___Trello
             this.boton_D.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
             this.boton_D.FlatAppearance.BorderSize = 0;
             this.boton_D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_D.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.boton_D.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.boton_D.ForeColor = System.Drawing.SystemColors.Desktop;
             this.boton_D.Location = new System.Drawing.Point(382, 99);
             this.boton_D.Margin = new System.Windows.Forms.Padding(0);
@@ -61,7 +64,7 @@ namespace Practica_Git___Trello
             this.boton_C.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(119)))), ((int)(((byte)(187)))));
             this.boton_C.FlatAppearance.BorderSize = 0;
             this.boton_C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_C.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.boton_C.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.boton_C.ForeColor = System.Drawing.SystemColors.Desktop;
             this.boton_C.Location = new System.Drawing.Point(0, 99);
             this.boton_C.Margin = new System.Windows.Forms.Padding(0);
@@ -77,7 +80,7 @@ namespace Practica_Git___Trello
             this.boton_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
             this.boton_B.FlatAppearance.BorderSize = 0;
             this.boton_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_B.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.boton_B.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.boton_B.ForeColor = System.Drawing.SystemColors.Desktop;
             this.boton_B.Location = new System.Drawing.Point(382, 0);
             this.boton_B.Margin = new System.Windows.Forms.Padding(0);
@@ -93,7 +96,7 @@ namespace Practica_Git___Trello
             this.boton_A.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.boton_A.FlatAppearance.BorderSize = 0;
             this.boton_A.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_A.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.boton_A.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.boton_A.ForeColor = System.Drawing.SystemColors.Desktop;
             this.boton_A.Location = new System.Drawing.Point(0, 0);
             this.boton_A.Margin = new System.Windows.Forms.Padding(0);
@@ -121,24 +124,48 @@ namespace Practica_Git___Trello
             // 
             // lbl_pregunta
             // 
-            this.lbl_pregunta.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_pregunta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_pregunta.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_pregunta.Location = new System.Drawing.Point(0, 0);
+            this.lbl_pregunta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_pregunta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(193)))));
+            this.lbl_pregunta.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_pregunta.Location = new System.Drawing.Point(0, 53);
             this.lbl_pregunta.Name = "lbl_pregunta";
-            this.lbl_pregunta.Size = new System.Drawing.Size(800, 91);
+            this.lbl_pregunta.Size = new System.Drawing.Size(800, 108);
             this.lbl_pregunta.TabIndex = 6;
-            this.lbl_pregunta.Text = "1 ¿Cual es la velocidad de la luz?";
+            this.lbl_pregunta.Text = "Pregunta";
             this.lbl_pregunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_tiempo
             // 
-            this.lbl_tiempo.AutoSize = true;
-            this.lbl_tiempo.Location = new System.Drawing.Point(12, 112);
-            this.lbl_tiempo.Name = "lbl_tiempo";
-            this.lbl_tiempo.Size = new System.Drawing.Size(17, 20);
-            this.lbl_tiempo.TabIndex = 7;
-            this.lbl_tiempo.Text = "0";
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(717, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 52);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "30";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_numPreg
+            // 
+            this.lbl_numPreg.AutoSize = true;
+            this.lbl_numPreg.Font = new System.Drawing.Font("Candara", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lbl_numPreg.Location = new System.Drawing.Point(12, 9);
+            this.lbl_numPreg.Name = "lbl_numPreg";
+            this.lbl_numPreg.Size = new System.Drawing.Size(114, 28);
+            this.lbl_numPreg.TabIndex = 9;
+            this.lbl_numPreg.Text = "Pregunta 1";
             // 
             // formPrincipal
             // 
@@ -146,7 +173,8 @@ namespace Practica_Git___Trello
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 536);
-            this.Controls.Add(this.lbl_tiempo);
+            this.Controls.Add(this.lbl_numPreg);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lbl_pregunta);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -167,7 +195,10 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.Button boton_A;
         private System.Windows.Forms.FlowLayoutPanel panel1;
         private System.Windows.Forms.Label lbl_pregunta;
-        private System.Windows.Forms.Label lbl_tiempo;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_numPreg;
     }
 }
 
