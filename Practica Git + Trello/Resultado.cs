@@ -21,7 +21,7 @@ namespace Practica_Git___Trello
         {
             InitializeComponent();
             conn.Open();
-            String SelectN = "SELECT u.nombre, u.id_usuario, SUM(r.puntos) as puntos, COUNT(r.acierto) FROM usuario u, responder r WHERE r.id_usuario = u.id_usuario GROUP BY(u.id_usuario, u.nombre, r.acierto) ORDER BY puntos DESC LIMIT 6; ";
+            String SelectN = "SELECT u.nombre, u.id_usuario, SUM(r.puntos) as puntos, COUNT(r.acierto) as acierto FROM usuario u, responder r WHERE r.id_usuario = u.id_usuario GROUP BY(u.id_usuario, u.nombre) ORDER BY puntos DESC LIMIT 6; ";
             NpgsqlCommand comm = new NpgsqlCommand(SelectN, conn);
             NpgsqlDataReader nda = comm.ExecuteReader();
             ArrayList NameId = new ArrayList();
@@ -31,7 +31,6 @@ namespace Practica_Git___Trello
             while (nda.Read())
             {
                 String name = nda["nombre"].ToString();  //Aqui si sale error es porque a lo mejor le falta o le sobra (u.* o r.*)
-                String id = nda["id_usuario"].ToString();
                 String punt = nda["puntos"].ToString();
                 String acierto = nda["acierto"].ToString();
                 NameId.Add(name);
