@@ -39,13 +39,26 @@ namespace Practica_Git___Trello
                 Acierto.Add(acierto);
             }
 
-            Top1.Text = NameId[1].ToString() + "///" + Puntos[1].ToString() + "///" + Acierto[1].ToString();
-            Top2.Text = NameId[2].ToString() + "///" + Puntos[2].ToString() + "///" + Acierto[2].ToString();
-            Top3.Text = NameId[3].ToString() + "///" + Puntos[3].ToString() + "///" + Acierto[3].ToString();
-            Top4.Text = NameId[4].ToString() + "///" + Puntos[4].ToString() + "///" + Acierto[4].ToString();
-            Top5.Text = NameId[5].ToString() + "///" + Puntos[5].ToString() + "///" + Acierto[5].ToString();
-            Top6.Text = NameId[6].ToString() + "///" + Puntos[6].ToString() + "///" + Acierto[6].ToString();
+            Label[] label = new Label[6];
+            label[0] = Top1;
+            label[1] = Top2;
+            label[2] = Top3;
+            label[3] = Top4;
+            label[4] = Top5;
+            label[5] = Top6;
+            Label [] label1 = new Label[6];
+            label1[0] = Top11;
+            label1[1] = top21;
+            label1[2] = top31;
+            label1[3] = top41;
+            label1[4] = top51;
+            label1[5] = top61;
 
+            for (int i = 0; i < NameId.Count; i++)
+            {
+                label[i].Text = NameId[i].ToString();
+                label1[i].Text = Puntos[i].ToString() + "///" + Acierto[i].ToString() ;
+            }
 
         }
 
