@@ -47,17 +47,15 @@ namespace Practica_Git___Trello
             this.top51 = new System.Windows.Forms.Label();
             this.top61 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -68,7 +66,7 @@ namespace Practica_Git___Trello
             this.btn_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
             this.btn_Close.FlatAppearance.BorderSize = 0;
             this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Close.ForeColor = System.Drawing.Color.White;
             this.btn_Close.Location = new System.Drawing.Point(462, 144);
             this.btn_Close.Name = "btn_Close";
@@ -83,7 +81,7 @@ namespace Practica_Git___Trello
             this.btn_cambiaNombre.BackColor = System.Drawing.Color.SlateBlue;
             this.btn_cambiaNombre.FlatAppearance.BorderSize = 0;
             this.btn_cambiaNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cambiaNombre.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_cambiaNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_cambiaNombre.ForeColor = System.Drawing.Color.White;
             this.btn_cambiaNombre.Location = new System.Drawing.Point(251, 144);
             this.btn_cambiaNombre.Name = "btn_cambiaNombre";
@@ -98,7 +96,7 @@ namespace Practica_Git___Trello
             this.principal.BackColor = System.Drawing.Color.SlateBlue;
             this.principal.FlatAppearance.BorderSize = 0;
             this.principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.principal.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.principal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.principal.ForeColor = System.Drawing.Color.White;
             this.principal.Location = new System.Drawing.Point(40, 144);
             this.principal.Name = "principal";
@@ -111,36 +109,36 @@ namespace Practica_Git___Trello
             // Top1
             // 
             this.Top1.AutoSize = true;
-            this.Top1.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Top1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Top1.ForeColor = System.Drawing.Color.White;
             this.Top1.Location = new System.Drawing.Point(152, 53);
             this.Top1.MaximumSize = new System.Drawing.Size(103, 0);
             this.Top1.Name = "Top1";
-            this.Top1.Size = new System.Drawing.Size(43, 16);
+            this.Top1.Size = new System.Drawing.Size(56, 18);
             this.Top1.TabIndex = 4;
             this.Top1.Text = "TOP 1";
             // 
             // Top2
             // 
             this.Top2.AutoSize = true;
-            this.Top2.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Top2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Top2.ForeColor = System.Drawing.Color.White;
             this.Top2.Location = new System.Drawing.Point(42, 94);
             this.Top2.MaximumSize = new System.Drawing.Size(103, 0);
             this.Top2.Name = "Top2";
-            this.Top2.Size = new System.Drawing.Size(43, 16);
+            this.Top2.Size = new System.Drawing.Size(56, 18);
             this.Top2.TabIndex = 5;
             this.Top2.Text = "TOP 2";
             // 
             // Top3
             // 
             this.Top3.AutoSize = true;
-            this.Top3.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Top3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Top3.ForeColor = System.Drawing.Color.White;
             this.Top3.Location = new System.Drawing.Point(264, 140);
             this.Top3.MaximumSize = new System.Drawing.Size(103, 0);
             this.Top3.Name = "Top3";
-            this.Top3.Size = new System.Drawing.Size(43, 16);
+            this.Top3.Size = new System.Drawing.Size(56, 18);
             this.Top3.TabIndex = 6;
             this.Top3.Text = "TOP 3";
             this.Top3.Click += new System.EventHandler(this.Top3_Click);
@@ -172,6 +170,14 @@ namespace Practica_Git___Trello
             this.Top6.TabIndex = 9;
             this.Top6.Text = "TOP 6";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Practica_Git___Trello.Properties.Resources.logo;
@@ -184,6 +190,7 @@ namespace Practica_Git___Trello
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.Top3);
             this.panel1.Controls.Add(this.panel3);
@@ -240,11 +247,21 @@ namespace Practica_Git___Trello
             this.panel5.Controls.Add(this.principal);
             this.panel5.Controls.Add(this.btn_cambiaNombre);
             this.panel5.Controls.Add(this.btn_Close);
-            this.panel5.Location = new System.Drawing.Point(70, 139);
+            this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(654, 230);
             this.panel5.TabIndex = 13;
             this.panel5.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(106, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(444, 47);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "¿Que deberiamos hacer ahora?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
             // 
@@ -259,23 +276,12 @@ namespace Practica_Git___Trello
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Gill Sans Nova", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(106, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 47);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "¿Que deberiamos hacer ahora?";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Resultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(800, 484);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -284,6 +290,7 @@ namespace Practica_Git___Trello
             this.Controls.Add(this.Top4);
             this.Name = "Resultado";
             this.Text = " ";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
