@@ -34,7 +34,7 @@ namespace Practica_Git___Trello
             this.btn_cambiaNombre = new System.Windows.Forms.Button();
             this.principal = new System.Windows.Forms.Button();
             this.Top1 = new System.Windows.Forms.Label();
-            this.Top2 = new System.Windows.Forms.Label();
+            this.top2Puntos = new System.Windows.Forms.Label();
             this.Top3 = new System.Windows.Forms.Label();
             this.Top4 = new System.Windows.Forms.Label();
             this.Top5 = new System.Windows.Forms.Label();
@@ -47,19 +47,22 @@ namespace Practica_Git___Trello
             this.top51 = new System.Windows.Forms.Label();
             this.top61 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.top1Puntos = new System.Windows.Forms.Label();
+            this.top3Puntos = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +71,7 @@ namespace Practica_Git___Trello
             this.btn_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
             this.btn_Close.FlatAppearance.BorderSize = 0;
             this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Close.ForeColor = System.Drawing.Color.White;
             this.btn_Close.Location = new System.Drawing.Point(462, 144);
             this.btn_Close.Name = "btn_Close";
@@ -83,7 +86,7 @@ namespace Practica_Git___Trello
             this.btn_cambiaNombre.BackColor = System.Drawing.Color.SlateBlue;
             this.btn_cambiaNombre.FlatAppearance.BorderSize = 0;
             this.btn_cambiaNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cambiaNombre.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_cambiaNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_cambiaNombre.ForeColor = System.Drawing.Color.White;
             this.btn_cambiaNombre.Location = new System.Drawing.Point(251, 144);
             this.btn_cambiaNombre.Name = "btn_cambiaNombre";
@@ -98,7 +101,7 @@ namespace Practica_Git___Trello
             this.principal.BackColor = System.Drawing.Color.SlateBlue;
             this.principal.FlatAppearance.BorderSize = 0;
             this.principal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.principal.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.principal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.principal.ForeColor = System.Drawing.Color.White;
             this.principal.Location = new System.Drawing.Point(40, 144);
             this.principal.Name = "principal";
@@ -110,40 +113,41 @@ namespace Practica_Git___Trello
             // 
             // Top1
             // 
-            this.Top1.AutoSize = true;
-            this.Top1.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Top1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Top1.ForeColor = System.Drawing.Color.White;
-            this.Top1.Location = new System.Drawing.Point(152, 53);
-            this.Top1.MaximumSize = new System.Drawing.Size(103, 0);
+            this.Top1.Location = new System.Drawing.Point(121, 31);
+            this.Top1.MaximumSize = new System.Drawing.Size(103, 37);
+            this.Top1.MinimumSize = new System.Drawing.Size(103, 37);
             this.Top1.Name = "Top1";
-            this.Top1.Size = new System.Drawing.Size(43, 16);
+            this.Top1.Size = new System.Drawing.Size(103, 37);
             this.Top1.TabIndex = 4;
             this.Top1.Text = "TOP 1";
+            this.Top1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Top2
+            // top2Puntos
             // 
-            this.Top2.AutoSize = true;
-            this.Top2.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Top2.ForeColor = System.Drawing.Color.White;
-            this.Top2.Location = new System.Drawing.Point(42, 94);
-            this.Top2.MaximumSize = new System.Drawing.Size(103, 0);
-            this.Top2.Name = "Top2";
-            this.Top2.Size = new System.Drawing.Size(43, 16);
-            this.Top2.TabIndex = 5;
-            this.Top2.Text = "TOP 2";
+            this.top2Puntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.top2Puntos.ForeColor = System.Drawing.Color.White;
+            this.top2Puntos.Location = new System.Drawing.Point(0, 6);
+            this.top2Puntos.MaximumSize = new System.Drawing.Size(103, 37);
+            this.top2Puntos.MinimumSize = new System.Drawing.Size(103, 37);
+            this.top2Puntos.Name = "top2Puntos";
+            this.top2Puntos.Size = new System.Drawing.Size(103, 37);
+            this.top2Puntos.TabIndex = 5;
+            this.top2Puntos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Top3
             // 
-            this.Top3.AutoSize = true;
-            this.Top3.Font = new System.Drawing.Font("Gill Sans Nova", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Top3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Top3.ForeColor = System.Drawing.Color.White;
-            this.Top3.Location = new System.Drawing.Point(264, 140);
-            this.Top3.MaximumSize = new System.Drawing.Size(103, 0);
+            this.Top3.Location = new System.Drawing.Point(230, 112);
+            this.Top3.MaximumSize = new System.Drawing.Size(103, 37);
+            this.Top3.MinimumSize = new System.Drawing.Size(103, 37);
             this.Top3.Name = "Top3";
-            this.Top3.Size = new System.Drawing.Size(43, 16);
+            this.Top3.Size = new System.Drawing.Size(103, 37);
             this.Top3.TabIndex = 6;
             this.Top3.Text = "TOP 3";
-            this.Top3.Click += new System.EventHandler(this.Top3_Click);
+            this.Top3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Top4
             // 
@@ -172,6 +176,56 @@ namespace Practica_Git___Trello
             this.Top6.TabIndex = 9;
             this.Top6.Text = "TOP 6";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // Top11
+            // 
+            this.Top11.Location = new System.Drawing.Point(0, 0);
+            this.Top11.Name = "Top11";
+            this.Top11.Size = new System.Drawing.Size(100, 23);
+            this.Top11.TabIndex = 0;
+            // 
+            // top21
+            // 
+            this.top21.Location = new System.Drawing.Point(0, 0);
+            this.top21.Name = "top21";
+            this.top21.Size = new System.Drawing.Size(100, 23);
+            this.top21.TabIndex = 0;
+            // 
+            // top31
+            // 
+            this.top31.Location = new System.Drawing.Point(0, 0);
+            this.top31.Name = "top31";
+            this.top31.Size = new System.Drawing.Size(100, 23);
+            this.top31.TabIndex = 0;
+            // 
+            // top41
+            // 
+            this.top41.Location = new System.Drawing.Point(0, 0);
+            this.top41.Name = "top41";
+            this.top41.Size = new System.Drawing.Size(100, 23);
+            this.top41.TabIndex = 0;
+            // 
+            // top51
+            // 
+            this.top51.Location = new System.Drawing.Point(0, 0);
+            this.top51.Name = "top51";
+            this.top51.Size = new System.Drawing.Size(100, 23);
+            this.top51.TabIndex = 0;
+            // 
+            // top61
+            // 
+            this.top61.Location = new System.Drawing.Point(0, 0);
+            this.top61.Name = "top61";
+            this.top61.Size = new System.Drawing.Size(100, 23);
+            this.top61.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Practica_Git___Trello.Properties.Resources.logo;
@@ -187,7 +241,6 @@ namespace Practica_Git___Trello
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.Top3);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.Top2);
             this.panel1.Controls.Add(this.Top1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(55, 160);
@@ -198,6 +251,7 @@ namespace Practica_Git___Trello
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(140)))), ((int)(((byte)(242)))));
+            this.panel4.Controls.Add(this.top2Puntos);
             this.panel4.Location = new System.Drawing.Point(12, 112);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(103, 166);
@@ -206,6 +260,7 @@ namespace Practica_Git___Trello
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(140)))), ((int)(((byte)(242)))));
+            this.panel3.Controls.Add(this.top3Puntos);
             this.panel3.Location = new System.Drawing.Point(230, 158);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(103, 120);
@@ -214,23 +269,11 @@ namespace Practica_Git___Trello
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(140)))), ((int)(((byte)(242)))));
+            this.panel2.Controls.Add(this.top1Puntos);
             this.panel2.Location = new System.Drawing.Point(121, 71);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(103, 207);
             this.panel2.TabIndex = 12;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(754, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 35);
-            this.button1.TabIndex = 12;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel5
             // 
@@ -240,11 +283,21 @@ namespace Practica_Git___Trello
             this.panel5.Controls.Add(this.principal);
             this.panel5.Controls.Add(this.btn_cambiaNombre);
             this.panel5.Controls.Add(this.btn_Close);
-            this.panel5.Location = new System.Drawing.Point(70, 139);
+            this.panel5.Location = new System.Drawing.Point(79, 125);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(654, 230);
             this.panel5.TabIndex = 13;
             this.panel5.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(106, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(444, 47);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "¿Que deberiamos hacer ahora?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
             // 
@@ -259,15 +312,45 @@ namespace Practica_Git___Trello
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
+            // button1
             // 
-            this.label1.Font = new System.Drawing.Font("Gill Sans Nova", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(106, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 47);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "¿Que deberiamos hacer ahora?";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(754, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 35);
+            this.button1.TabIndex = 12;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // top1Puntos
+            // 
+            this.top1Puntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.top1Puntos.ForeColor = System.Drawing.Color.White;
+            this.top1Puntos.Location = new System.Drawing.Point(0, 20);
+            this.top1Puntos.MaximumSize = new System.Drawing.Size(103, 37);
+            this.top1Puntos.MinimumSize = new System.Drawing.Size(103, 37);
+            this.top1Puntos.Name = "top1Puntos";
+            this.top1Puntos.Size = new System.Drawing.Size(103, 37);
+            this.top1Puntos.TabIndex = 4;
+            this.top1Puntos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // top3Puntos
+            // 
+            this.top3Puntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.top3Puntos.ForeColor = System.Drawing.Color.White;
+            this.top3Puntos.Location = new System.Drawing.Point(0, 0);
+            this.top3Puntos.MaximumSize = new System.Drawing.Size(103, 37);
+            this.top3Puntos.MinimumSize = new System.Drawing.Size(103, 37);
+            this.top3Puntos.Name = "top3Puntos";
+            this.top3Puntos.Size = new System.Drawing.Size(103, 37);
+            this.top3Puntos.TabIndex = 6;
+            this.top3Puntos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Resultado
             // 
@@ -284,9 +367,12 @@ namespace Practica_Git___Trello
             this.Controls.Add(this.Top4);
             this.Name = "Resultado";
             this.Text = " ";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -299,7 +385,7 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.Button btn_cambiaNombre;
         private System.Windows.Forms.Button principal;
         private System.Windows.Forms.Label Top1;
-        private System.Windows.Forms.Label Top2;
+        private System.Windows.Forms.Label top2Puntos;
         private System.Windows.Forms.Label Top3;
         private System.Windows.Forms.Label Top4;
         private System.Windows.Forms.Label Top5;
@@ -320,5 +406,7 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label top1Puntos;
+        private System.Windows.Forms.Label top3Puntos;
     }
 }

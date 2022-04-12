@@ -191,9 +191,9 @@ namespace Practica_Git___Trello
                 if (respuestaCorrecta.Equals("A"))
                 {
                     boton_A.BackColor = Color.FromArgb(124, 169, 107);
-                    boton_B.BackColor = Color.Red;
-                    boton_C.BackColor = Color.Red;
-                    boton_D.BackColor = Color.Red;
+                    boton_B.BackColor = Color.FromArgb(167, 55, 72);
+                    boton_C.BackColor = Color.FromArgb(167, 55, 72);
+                    boton_D.BackColor = Color.FromArgb(167, 55, 72);
                 }
                 else if (respuestaCorrecta.Equals("B"))
                 {
