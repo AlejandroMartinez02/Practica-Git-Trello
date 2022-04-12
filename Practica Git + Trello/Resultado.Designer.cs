@@ -34,11 +34,8 @@ namespace Practica_Git___Trello
             this.btn_cambiaNombre = new System.Windows.Forms.Button();
             this.principal = new System.Windows.Forms.Button();
             this.Top1 = new System.Windows.Forms.Label();
-            this.top2Puntos = new System.Windows.Forms.Label();
+            this.Top2 = new System.Windows.Forms.Label();
             this.Top3 = new System.Windows.Forms.Label();
-            this.Top4 = new System.Windows.Forms.Label();
-            this.Top5 = new System.Windows.Forms.Label();
-            this.Top6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Top11 = new System.Windows.Forms.Label();
             this.top21 = new System.Windows.Forms.Label();
@@ -49,14 +46,20 @@ namespace Practica_Git___Trello
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.top12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.top13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.top111 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.top1Puntos = new System.Windows.Forms.Label();
-            this.top3Puntos = new System.Windows.Forms.Label();
+            this.Top4 = new System.Windows.Forms.Label();
+            this.Top5 = new System.Windows.Forms.Label();
+            this.Top6 = new System.Windows.Forms.Label();
+            this.top14 = new System.Windows.Forms.Label();
+            this.top15 = new System.Windows.Forms.Label();
+            this.top16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -75,7 +78,7 @@ namespace Practica_Git___Trello
             this.btn_Close.ForeColor = System.Drawing.Color.White;
             this.btn_Close.Location = new System.Drawing.Point(462, 144);
             this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(156, 60);
+            this.btn_Close.Size = new System.Drawing.Size(155, 60);
             this.btn_Close.TabIndex = 0;
             this.btn_Close.Text = "SALIR DEL JUEGO";
             this.btn_Close.UseVisualStyleBackColor = false;
@@ -90,7 +93,7 @@ namespace Practica_Git___Trello
             this.btn_cambiaNombre.ForeColor = System.Drawing.Color.White;
             this.btn_cambiaNombre.Location = new System.Drawing.Point(251, 144);
             this.btn_cambiaNombre.Name = "btn_cambiaNombre";
-            this.btn_cambiaNombre.Size = new System.Drawing.Size(156, 60);
+            this.btn_cambiaNombre.Size = new System.Drawing.Size(155, 60);
             this.btn_cambiaNombre.TabIndex = 1;
             this.btn_cambiaNombre.Text = "CAMBIAR NOMBRE";
             this.btn_cambiaNombre.UseVisualStyleBackColor = false;
@@ -105,7 +108,7 @@ namespace Practica_Git___Trello
             this.principal.ForeColor = System.Drawing.Color.White;
             this.principal.Location = new System.Drawing.Point(40, 144);
             this.principal.Name = "principal";
-            this.principal.Size = new System.Drawing.Size(156, 60);
+            this.principal.Size = new System.Drawing.Size(155, 60);
             this.principal.TabIndex = 2;
             this.principal.Text = "REINICIAR MISMO NOMBRE";
             this.principal.UseVisualStyleBackColor = false;
@@ -113,68 +116,32 @@ namespace Practica_Git___Trello
             // 
             // Top1
             // 
+            this.Top1.AutoSize = true;
             this.Top1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Top1.ForeColor = System.Drawing.Color.White;
-            this.Top1.Location = new System.Drawing.Point(121, 31);
-            this.Top1.MaximumSize = new System.Drawing.Size(103, 37);
-            this.Top1.MinimumSize = new System.Drawing.Size(103, 37);
+            this.Top1.Location = new System.Drawing.Point(141, 51);
+            this.Top1.MaximumSize = new System.Drawing.Size(103, 0);
             this.Top1.Name = "Top1";
-            this.Top1.Size = new System.Drawing.Size(103, 37);
+            this.Top1.Size = new System.Drawing.Size(0, 18);
             this.Top1.TabIndex = 4;
-            this.Top1.Text = "TOP 1";
-            this.Top1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // top2Puntos
+            // Top2
             // 
-            this.top2Puntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.top2Puntos.ForeColor = System.Drawing.Color.White;
-            this.top2Puntos.Location = new System.Drawing.Point(0, 6);
-            this.top2Puntos.MaximumSize = new System.Drawing.Size(103, 37);
-            this.top2Puntos.MinimumSize = new System.Drawing.Size(103, 37);
-            this.top2Puntos.Name = "top2Puntos";
-            this.top2Puntos.Size = new System.Drawing.Size(103, 37);
-            this.top2Puntos.TabIndex = 5;
-            this.top2Puntos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Top2.Location = new System.Drawing.Point(0, 0);
+            this.Top2.Name = "Top2";
+            this.Top2.Size = new System.Drawing.Size(100, 23);
+            this.Top2.TabIndex = 0;
             // 
             // Top3
             // 
+            this.Top3.AutoSize = true;
             this.Top3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Top3.ForeColor = System.Drawing.Color.White;
-            this.Top3.Location = new System.Drawing.Point(230, 112);
-            this.Top3.MaximumSize = new System.Drawing.Size(103, 37);
-            this.Top3.MinimumSize = new System.Drawing.Size(103, 37);
+            this.Top3.Location = new System.Drawing.Point(264, 140);
+            this.Top3.MaximumSize = new System.Drawing.Size(103, 0);
             this.Top3.Name = "Top3";
-            this.Top3.Size = new System.Drawing.Size(103, 37);
+            this.Top3.Size = new System.Drawing.Size(0, 18);
             this.Top3.TabIndex = 6;
-            this.Top3.Text = "TOP 3";
-            this.Top3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Top4
-            // 
-            this.Top4.AutoSize = true;
-            this.Top4.Location = new System.Drawing.Point(418, 171);
-            this.Top4.Name = "Top4";
-            this.Top4.Size = new System.Drawing.Size(47, 20);
-            this.Top4.TabIndex = 7;
-            this.Top4.Text = "TOP 4";
-            // 
-            // Top5
-            // 
-            this.Top5.AutoSize = true;
-            this.Top5.Location = new System.Drawing.Point(418, 203);
-            this.Top5.Name = "Top5";
-            this.Top5.Size = new System.Drawing.Size(47, 20);
-            this.Top5.TabIndex = 8;
-            this.Top5.Text = "TOP 5";
-            // 
-            // Top6
-            // 
-            this.Top6.AutoSize = true;
-            this.Top6.Location = new System.Drawing.Point(418, 238);
-            this.Top6.Name = "Top6";
-            this.Top6.Size = new System.Drawing.Size(47, 20);
-            this.Top6.TabIndex = 9;
-            this.Top6.Text = "TOP 6";
             // 
             // pictureBox2
             // 
@@ -231,7 +198,7 @@ namespace Practica_Git___Trello
             this.pictureBox1.Image = global::Practica_Git___Trello.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(55, 40);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(346, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(346, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -245,35 +212,68 @@ namespace Practica_Git___Trello
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(55, 160);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(346, 278);
+            this.panel1.Size = new System.Drawing.Size(346, 277);
             this.panel1.TabIndex = 11;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(140)))), ((int)(((byte)(242)))));
-            this.panel4.Controls.Add(this.top2Puntos);
-            this.panel4.Location = new System.Drawing.Point(12, 112);
+            this.panel4.Controls.Add(this.top12);
+            this.panel4.Location = new System.Drawing.Point(11, 112);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(103, 166);
+            this.panel4.Size = new System.Drawing.Size(103, 165);
             this.panel4.TabIndex = 13;
+            // 
+            // top12
+            // 
+            this.top12.AutoSize = true;
+            this.top12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.top12.ForeColor = System.Drawing.Color.White;
+            this.top12.Location = new System.Drawing.Point(19, 45);
+            this.top12.MaximumSize = new System.Drawing.Size(103, 0);
+            this.top12.Name = "top12";
+            this.top12.Size = new System.Drawing.Size(0, 18);
+            this.top12.TabIndex = 17;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(140)))), ((int)(((byte)(242)))));
-            this.panel3.Controls.Add(this.top3Puntos);
-            this.panel3.Location = new System.Drawing.Point(230, 158);
+            this.panel3.Controls.Add(this.top13);
+            this.panel3.Location = new System.Drawing.Point(230, 157);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(103, 120);
             this.panel3.TabIndex = 13;
             // 
+            // top13
+            // 
+            this.top13.AutoSize = true;
+            this.top13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.top13.ForeColor = System.Drawing.Color.White;
+            this.top13.Location = new System.Drawing.Point(34, 36);
+            this.top13.MaximumSize = new System.Drawing.Size(103, 0);
+            this.top13.Name = "top13";
+            this.top13.Size = new System.Drawing.Size(0, 18);
+            this.top13.TabIndex = 19;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(140)))), ((int)(((byte)(242)))));
-            this.panel2.Controls.Add(this.top1Puntos);
+            this.panel2.Controls.Add(this.top111);
             this.panel2.Location = new System.Drawing.Point(121, 71);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(103, 207);
             this.panel2.TabIndex = 12;
+            // 
+            // top111
+            // 
+            this.top111.AutoSize = true;
+            this.top111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.top111.ForeColor = System.Drawing.Color.White;
+            this.top111.Location = new System.Drawing.Point(19, 41);
+            this.top111.MaximumSize = new System.Drawing.Size(103, 0);
+            this.top111.Name = "top111";
+            this.top111.Size = new System.Drawing.Size(0, 18);
+            this.top111.TabIndex = 18;
             // 
             // panel5
             // 
@@ -283,18 +283,19 @@ namespace Practica_Git___Trello
             this.panel5.Controls.Add(this.principal);
             this.panel5.Controls.Add(this.btn_cambiaNombre);
             this.panel5.Controls.Add(this.btn_Close);
-            this.panel5.Location = new System.Drawing.Point(79, 125);
+            this.panel5.Location = new System.Drawing.Point(34, 163);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(654, 230);
+            this.panel5.Size = new System.Drawing.Size(654, 229);
             this.panel5.TabIndex = 13;
             this.panel5.Visible = false;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(106, 42);
+            this.label1.Location = new System.Drawing.Point(121, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 47);
+            this.label1.Size = new System.Drawing.Size(507, 63);
             this.label1.TabIndex = 15;
             this.label1.Text = "¿Que deberiamos hacer ahora?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -307,50 +308,76 @@ namespace Practica_Git___Trello
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(611, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 30);
+            this.button2.Size = new System.Drawing.Size(30, 29);
             this.button2.TabIndex = 14;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // Top4
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(754, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 35);
-            this.button1.TabIndex = 12;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Top4.AutoSize = true;
+            this.Top4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Top4.ForeColor = System.Drawing.Color.White;
+            this.Top4.Location = new System.Drawing.Point(423, 189);
+            this.Top4.MaximumSize = new System.Drawing.Size(103, 0);
+            this.Top4.Name = "Top4";
+            this.Top4.Size = new System.Drawing.Size(0, 18);
+            this.Top4.TabIndex = 14;
             // 
-            // top1Puntos
+            // Top5
             // 
-            this.top1Puntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.top1Puntos.ForeColor = System.Drawing.Color.White;
-            this.top1Puntos.Location = new System.Drawing.Point(0, 20);
-            this.top1Puntos.MaximumSize = new System.Drawing.Size(103, 37);
-            this.top1Puntos.MinimumSize = new System.Drawing.Size(103, 37);
-            this.top1Puntos.Name = "top1Puntos";
-            this.top1Puntos.Size = new System.Drawing.Size(103, 37);
-            this.top1Puntos.TabIndex = 4;
-            this.top1Puntos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Top5.AutoSize = true;
+            this.Top5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Top5.ForeColor = System.Drawing.Color.White;
+            this.Top5.Location = new System.Drawing.Point(423, 232);
+            this.Top5.MaximumSize = new System.Drawing.Size(103, 0);
+            this.Top5.Name = "Top5";
+            this.Top5.Size = new System.Drawing.Size(0, 18);
+            this.Top5.TabIndex = 15;
             // 
-            // top3Puntos
+            // Top6
             // 
-            this.top3Puntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.top3Puntos.ForeColor = System.Drawing.Color.White;
-            this.top3Puntos.Location = new System.Drawing.Point(0, 0);
-            this.top3Puntos.MaximumSize = new System.Drawing.Size(103, 37);
-            this.top3Puntos.MinimumSize = new System.Drawing.Size(103, 37);
-            this.top3Puntos.Name = "top3Puntos";
-            this.top3Puntos.Size = new System.Drawing.Size(103, 37);
-            this.top3Puntos.TabIndex = 6;
-            this.top3Puntos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Top6.AutoSize = true;
+            this.Top6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Top6.ForeColor = System.Drawing.Color.White;
+            this.Top6.Location = new System.Drawing.Point(423, 288);
+            this.Top6.MaximumSize = new System.Drawing.Size(103, 0);
+            this.Top6.Name = "Top6";
+            this.Top6.Size = new System.Drawing.Size(0, 18);
+            this.Top6.TabIndex = 16;
+            // 
+            // top14
+            // 
+            this.top14.AutoSize = true;
+            this.top14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.top14.ForeColor = System.Drawing.Color.White;
+            this.top14.Location = new System.Drawing.Point(742, 189);
+            this.top14.MaximumSize = new System.Drawing.Size(103, 0);
+            this.top14.Name = "top14";
+            this.top14.Size = new System.Drawing.Size(0, 18);
+            this.top14.TabIndex = 17;
+            // 
+            // top15
+            // 
+            this.top15.AutoSize = true;
+            this.top15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.top15.ForeColor = System.Drawing.Color.White;
+            this.top15.Location = new System.Drawing.Point(742, 231);
+            this.top15.MaximumSize = new System.Drawing.Size(103, 0);
+            this.top15.Name = "top15";
+            this.top15.Size = new System.Drawing.Size(0, 18);
+            this.top15.TabIndex = 18;
+            // 
+            // top16
+            // 
+            this.top16.AutoSize = true;
+            this.top16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.top16.ForeColor = System.Drawing.Color.White;
+            this.top16.Location = new System.Drawing.Point(742, 288);
+            this.top16.MaximumSize = new System.Drawing.Size(103, 0);
+            this.top16.Name = "top16";
+            this.top16.Size = new System.Drawing.Size(0, 18);
+            this.top16.TabIndex = 19;
             // 
             // Resultado
             // 
@@ -358,21 +385,28 @@ namespace Practica_Git___Trello
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(800, 484);
+            this.Controls.Add(this.top16);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.top15);
+            this.Controls.Add(this.top14);
             this.Controls.Add(this.Top6);
             this.Controls.Add(this.Top5);
             this.Controls.Add(this.Top4);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "Resultado";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.Resultado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -385,11 +419,8 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.Button btn_cambiaNombre;
         private System.Windows.Forms.Button principal;
         private System.Windows.Forms.Label Top1;
-        private System.Windows.Forms.Label top2Puntos;
+        private System.Windows.Forms.Label Top2;
         private System.Windows.Forms.Label Top3;
-        private System.Windows.Forms.Label Top4;
-        private System.Windows.Forms.Label Top5;
-        private System.Windows.Forms.Label Top6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Top11;
         private System.Windows.Forms.Label top21;
@@ -406,7 +437,14 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label top1Puntos;
-        private System.Windows.Forms.Label top3Puntos;
+        private System.Windows.Forms.Label top12;
+        private System.Windows.Forms.Label top13;
+        private System.Windows.Forms.Label top111;
+        private System.Windows.Forms.Label Top4;
+        private System.Windows.Forms.Label Top5;
+        private System.Windows.Forms.Label Top6;
+        private System.Windows.Forms.Label top14;
+        private System.Windows.Forms.Label top15;
+        private System.Windows.Forms.Label top16;
     }
 }
