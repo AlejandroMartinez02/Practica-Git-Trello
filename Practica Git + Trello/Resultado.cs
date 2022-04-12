@@ -32,10 +32,14 @@ namespace Practica_Git___Trello
             {
                 String name = nda["nombre"].ToString();  //Aqui si sale error es porque a lo mejor le falta o le sobra (u.* o r.*)
                 String punt = nda["puntos"].ToString();
-                String acierto = nda["acierto"].ToString();
+                
                 NameId.Add(name);
                 Puntos.Add(punt);
-                Acierto.Add(acierto);
+                String acierto = nda["acierto"].ToString();
+                if (acierto.Equals("true"))
+                {                   
+                    Acierto.Add(acierto);
+                }
             }
 
             Label[] label = new Label[6];
@@ -46,12 +50,12 @@ namespace Practica_Git___Trello
             label[4] = Top5;
             label[5] = Top6;
             Label [] label1 = new Label[6];
-            label1[0] = Top11;
-            label1[1] = top21;
-            label1[2] = top31;
-            label1[3] = top41;
-            label1[4] = top51;
-            label1[5] = top61;
+            label1[0] = top111;
+            label1[1] = top12;
+            label1[2] = top13;
+            label1[3] = top14;
+            label1[4] = top15;
+            label1[5] = top16;
 
             for (int i = 0; i < NameId.Count; i++)
             {
@@ -113,6 +117,16 @@ namespace Practica_Git___Trello
         private void button2_Click(object sender, EventArgs e)
         {
             panel5.Visible = false;
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Resultado_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
