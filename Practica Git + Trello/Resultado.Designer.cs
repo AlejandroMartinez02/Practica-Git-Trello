@@ -40,6 +40,12 @@ namespace Practica_Git___Trello
             this.Top6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Top11 = new System.Windows.Forms.Label();
+            this.top21 = new System.Windows.Forms.Label();
+            this.top31 = new System.Windows.Forms.Label();
+            this.top41 = new System.Windows.Forms.Label();
+            this.top51 = new System.Windows.Forms.Label();
+            this.top61 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -154,12 +160,72 @@ namespace Practica_Git___Trello
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // Top11
+            // 
+            this.Top11.AutoSize = true;
+            this.Top11.Location = new System.Drawing.Point(202, 238);
+            this.Top11.Name = "Top11";
+            this.Top11.Size = new System.Drawing.Size(37, 15);
+            this.Top11.TabIndex = 12;
+            this.Top11.Text = "punts";
+            // 
+            // top21
+            // 
+            this.top21.AutoSize = true;
+            this.top21.Location = new System.Drawing.Point(53, 261);
+            this.top21.Name = "top21";
+            this.top21.Size = new System.Drawing.Size(38, 15);
+            this.top21.TabIndex = 13;
+            this.top21.Text = "label1";
+            // 
+            // top31
+            // 
+            this.top31.AutoSize = true;
+            this.top31.Location = new System.Drawing.Point(306, 295);
+            this.top31.Name = "top31";
+            this.top31.Size = new System.Drawing.Size(38, 15);
+            this.top31.TabIndex = 14;
+            this.top31.Text = "label1";
+            // 
+            // top41
+            // 
+            this.top41.AutoSize = true;
+            this.top41.Location = new System.Drawing.Point(618, 216);
+            this.top41.Name = "top41";
+            this.top41.Size = new System.Drawing.Size(38, 15);
+            this.top41.TabIndex = 15;
+            this.top41.Text = "label1";
+            // 
+            // top51
+            // 
+            this.top51.AutoSize = true;
+            this.top51.Location = new System.Drawing.Point(618, 285);
+            this.top51.Name = "top51";
+            this.top51.Size = new System.Drawing.Size(38, 15);
+            this.top51.TabIndex = 16;
+            this.top51.Text = "label1";
+            // 
+            // top61
+            // 
+            this.top61.AutoSize = true;
+            this.top61.Location = new System.Drawing.Point(618, 358);
+            this.top61.Name = "top61";
+            this.top61.Size = new System.Drawing.Size(38, 15);
+            this.top61.TabIndex = 17;
+            this.top61.Text = "label1";
+            // 
             // Resultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.top61);
+            this.Controls.Add(this.top51);
+            this.Controls.Add(this.top41);
+            this.Controls.Add(this.top31);
+            this.Controls.Add(this.top21);
+            this.Controls.Add(this.Top11);
             this.Controls.Add(this.Top3);
             this.Controls.Add(this.Top1);
             this.Controls.Add(this.Top2);
@@ -193,5 +259,11 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.Label Top6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label Top11;
+        private System.Windows.Forms.Label top21;
+        private System.Windows.Forms.Label top31;
+        private System.Windows.Forms.Label top41;
+        private System.Windows.Forms.Label top51;
+        private System.Windows.Forms.Label top61;
     }
 }
