@@ -279,7 +279,7 @@ namespace Practica_Git___Trello
             this.panel5.Controls.Add(this.principal);
             this.panel5.Controls.Add(this.btn_cambiaNombre);
             this.panel5.Controls.Add(this.btn_Close);
-            this.panel5.Location = new System.Drawing.Point(81, 120);
+            this.panel5.Location = new System.Drawing.Point(30, 122);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(572, 172);
@@ -382,7 +382,7 @@ namespace Practica_Git___Trello
             this.top14.AutoSize = true;
             this.top14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.top14.ForeColor = System.Drawing.Color.White;
-            this.top14.Location = new System.Drawing.Point(485, 142);
+            this.top14.Location = new System.Drawing.Point(649, 142);
             this.top14.MaximumSize = new System.Drawing.Size(90, 0);
             this.top14.Name = "top14";
             this.top14.Size = new System.Drawing.Size(0, 15);
@@ -393,7 +393,7 @@ namespace Practica_Git___Trello
             this.top15.AutoSize = true;
             this.top15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.top15.ForeColor = System.Drawing.Color.White;
-            this.top15.Location = new System.Drawing.Point(485, 174);
+            this.top15.Location = new System.Drawing.Point(649, 173);
             this.top15.MaximumSize = new System.Drawing.Size(90, 0);
             this.top15.Name = "top15";
             this.top15.Size = new System.Drawing.Size(0, 15);
@@ -404,7 +404,7 @@ namespace Practica_Git___Trello
             this.top16.AutoSize = true;
             this.top16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.top16.ForeColor = System.Drawing.Color.White;
-            this.top16.Location = new System.Drawing.Point(485, 216);
+            this.top16.Location = new System.Drawing.Point(649, 216);
             this.top16.MaximumSize = new System.Drawing.Size(90, 0);
             this.top16.Name = "top16";
             this.top16.Size = new System.Drawing.Size(0, 15);
@@ -417,12 +417,12 @@ namespace Practica_Git___Trello
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(700, 363);
             this.Controls.Add(this.top16);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.top15);
             this.Controls.Add(this.top14);
             this.Controls.Add(this.Top6);
             this.Controls.Add(this.Top5);
             this.Controls.Add(this.Top4);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
