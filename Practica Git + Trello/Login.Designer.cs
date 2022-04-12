@@ -48,13 +48,14 @@ namespace Practica_Git___Trello
             this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Logo.TabIndex = 0;
             this.pb_Logo.TabStop = false;
+            this.pb_Logo.Click += new System.EventHandler(this.pb_Logo_Click);
             // 
             // btn_avanzar
             // 
             this.btn_avanzar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.btn_avanzar.FlatAppearance.BorderSize = 0;
             this.btn_avanzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_avanzar.Font = new System.Drawing.Font("Gill Sans Nova", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_avanzar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_avanzar.ForeColor = System.Drawing.Color.White;
             this.btn_avanzar.Location = new System.Drawing.Point(29, 76);
             this.btn_avanzar.Name = "btn_avanzar";
@@ -66,12 +67,12 @@ namespace Practica_Git___Trello
             // 
             // tb_usuario
             // 
-            this.tb_usuario.Font = new System.Drawing.Font("Gill Sans Nova", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tb_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tb_usuario.Location = new System.Drawing.Point(29, 24);
             this.tb_usuario.MaxLength = 20;
             this.tb_usuario.Name = "tb_usuario";
             this.tb_usuario.PlaceholderText = "¡Introduce usuario!";
-            this.tb_usuario.Size = new System.Drawing.Size(236, 35);
+            this.tb_usuario.Size = new System.Drawing.Size(236, 31);
             this.tb_usuario.TabIndex = 3;
             this.tb_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

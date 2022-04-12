@@ -32,31 +32,35 @@ namespace Practica_Git___Trello
             {
                 String name = nda["nombre"].ToString();  //Aqui si sale error es porque a lo mejor le falta o le sobra (u.* o r.*)
                 String punt = nda["puntos"].ToString();
-                String acierto = nda["acierto"].ToString();
+                
                 NameId.Add(name);
                 Puntos.Add(punt);
-                Acierto.Add(acierto);
+                String acierto = nda["acierto"].ToString();
+                if (acierto.Equals("true"))
+                {                   
+                    Acierto.Add(acierto);
+                }
             }
 
-            Label[] label = new Label[6];
-            label[0] = Top1;
-            label[1] = Top2;
-            label[2] = Top3;
-            label[3] = Top4;
-            label[4] = Top5;
-            label[5] = Top6;
-            Label [] label1 = new Label[6];
-            label1[0] = Top11;
-            label1[1] = top21;
-            label1[2] = top31;
-            label1[3] = top41;
-            label1[4] = top51;
-            label1[5] = top61;
+            Label[] nombres = new Label[6];
+            nombres[0] = Top1;
+            //nombres[1] = Top2;
+            nombres[2] = Top3;
+           /* nombres[3] = Top4;
+            nombres[4] = Top5;
+            nombres[5] = Top6;*/
+            Label [] puntosAciertos = new Label[6];
+            puntosAciertos[0] = Top1;
+            puntosAciertos[1] = top21;
+            puntosAciertos[2] = top31;
+            puntosAciertos[3] = top41;
+            puntosAciertos[4] = top51;
+            puntosAciertos[5] = top61;
 
             for (int i = 0; i < NameId.Count; i++)
             {
-                label[i].Text = NameId[i].ToString();
-                label1[i].Text = Puntos[i].ToString() + "///" + Acierto[i].ToString() ;
+                nombres[i].Text = NameId[i].ToString();
+                puntosAciertos[i].Text = "Puntos:" + "\n" + Puntos[i].ToString() + "Aciertos:" + Acierto[i].ToString() ;
             }
 
         }
@@ -85,26 +89,6 @@ namespace Practica_Git___Trello
             this.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Top3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             panel5.Visible = true;
@@ -113,6 +97,16 @@ namespace Practica_Git___Trello
         private void button2_Click(object sender, EventArgs e)
         {
             panel5.Visible = false;
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Resultado_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
