@@ -30,41 +30,35 @@ namespace Practica_Git___Trello
         private void InitializeComponent()
         {
             this.pb_Logo = new System.Windows.Forms.PictureBox();
-            this.lbl_nombre = new System.Windows.Forms.Label();
             this.btn_avanzar = new System.Windows.Forms.Button();
             this.tb_usuario = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pb_Logo
             // 
             this.pb_Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pb_Logo.BackgroundImage = global::Practica_Git___Trello.Properties.Resources.logo;
-            this.pb_Logo.Location = new System.Drawing.Point(80, 31);
+            this.pb_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_Logo.Location = new System.Drawing.Point(170, 101);
             this.pb_Logo.Name = "pb_Logo";
-            this.pb_Logo.Size = new System.Drawing.Size(626, 196);
+            this.pb_Logo.Size = new System.Drawing.Size(466, 157);
             this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Logo.TabIndex = 0;
             this.pb_Logo.TabStop = false;
             // 
-            // lbl_nombre
-            // 
-            this.lbl_nombre.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_nombre.Location = new System.Drawing.Point(73, 313);
-            this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(205, 39);
-            this.lbl_nombre.TabIndex = 1;
-            this.lbl_nombre.Text = "Nombre de usuario:";
-            // 
             // btn_avanzar
             // 
-            this.btn_avanzar.BackColor = System.Drawing.Color.SlateBlue;
-            this.btn_avanzar.FlatAppearance.BorderSize = 2;
+            this.btn_avanzar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
+            this.btn_avanzar.FlatAppearance.BorderSize = 0;
             this.btn_avanzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_avanzar.Font = new System.Drawing.Font("Gill Sans Nova", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_avanzar.ForeColor = System.Drawing.Color.White;
-            this.btn_avanzar.Location = new System.Drawing.Point(620, 384);
+            this.btn_avanzar.Location = new System.Drawing.Point(29, 76);
             this.btn_avanzar.Name = "btn_avanzar";
-            this.btn_avanzar.Size = new System.Drawing.Size(150, 58);
+            this.btn_avanzar.Size = new System.Drawing.Size(236, 34);
             this.btn_avanzar.TabIndex = 2;
             this.btn_avanzar.Text = "¡Comencemos!";
             this.btn_avanzar.UseVisualStyleBackColor = false;
@@ -72,22 +66,36 @@ namespace Practica_Git___Trello
             // 
             // tb_usuario
             // 
-            this.tb_usuario.Location = new System.Drawing.Point(284, 316);
+            this.tb_usuario.Font = new System.Drawing.Font("Gill Sans Nova", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tb_usuario.Location = new System.Drawing.Point(29, 24);
+            this.tb_usuario.MaxLength = 20;
             this.tb_usuario.Name = "tb_usuario";
-            this.tb_usuario.Size = new System.Drawing.Size(164, 27);
+            this.tb_usuario.PlaceholderText = "¡Introduce usuario!";
+            this.tb_usuario.Size = new System.Drawing.Size(236, 35);
             this.tb_usuario.TabIndex = 3;
+            this.tb_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.btn_avanzar);
+            this.panel1.Controls.Add(this.tb_usuario);
+            this.panel1.Location = new System.Drawing.Point(240, 300);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(291, 133);
+            this.panel1.TabIndex = 4;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(782, 453);
-            this.Controls.Add(this.tb_usuario);
-            this.Controls.Add(this.btn_avanzar);
-            this.Controls.Add(this.lbl_nombre);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
+            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pb_Logo);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(800, 500);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "Login";
@@ -95,16 +103,17 @@ namespace Practica_Git___Trello
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logo)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pb_Logo;
-        private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.Button btn_avanzar;
         private System.Windows.Forms.TextBox tb_usuario;
+        private System.Windows.Forms.Panel panel1;
     }
 }

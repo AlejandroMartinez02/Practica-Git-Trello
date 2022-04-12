@@ -34,6 +34,7 @@ namespace Practica_Git___Trello
             this.pb_logo = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,9 +46,11 @@ namespace Practica_Git___Trello
             // pb_logo
             // 
             this.pb_logo.BackgroundImage = global::Practica_Git___Trello.Properties.Resources.logo;
-            this.pb_logo.Location = new System.Drawing.Point(88, 56);
+            this.pb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_logo.Location = new System.Drawing.Point(149, 65);
+            this.pb_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pb_logo.Name = "pb_logo";
-            this.pb_logo.Size = new System.Drawing.Size(626, 196);
+            this.pb_logo.Size = new System.Drawing.Size(412, 134);
             this.pb_logo.TabIndex = 3;
             this.pb_logo.TabStop = false;
             // 
@@ -61,22 +64,21 @@ namespace Practica_Git___Trello
             this.circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.circularProgressBar1.AnimationSpeed = 100;
             this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.circularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.circularProgressBar1.InnerColor = System.Drawing.Color.WhiteSmoke;
+            this.circularProgressBar1.Font = new System.Drawing.Font("Gill Sans Nova", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.circularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.circularProgressBar1.InnerMargin = 0;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(307, 279);
-            this.circularProgressBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.circularProgressBar1.Location = new System.Drawing.Point(304, 252);
             this.circularProgressBar1.MarqueeAnimationSpeed = 6000;
             this.circularProgressBar1.Name = "circularProgressBar1";
-            this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(223)))), ((int)(((byte)(127)))));
+            this.circularProgressBar1.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.circularProgressBar1.OuterMargin = -25;
-            this.circularProgressBar1.OuterWidth = 26;
-            this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(119)))), ((int)(((byte)(187)))));
-            this.circularProgressBar1.ProgressWidth = 25;
+            this.circularProgressBar1.OuterWidth = 20;
+            this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.circularProgressBar1.ProgressWidth = 12;
             this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.circularProgressBar1.Size = new System.Drawing.Size(150, 150);
+            this.circularProgressBar1.Size = new System.Drawing.Size(100, 97);
             this.circularProgressBar1.StartAngle = 270;
             this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
@@ -89,18 +91,33 @@ namespace Practica_Git___Trello
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(0);
             this.circularProgressBar1.Value = 68;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Gill Sans Nova Cond", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 302);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 69);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Desarrollado por: \r\n- Alejandro Martinez\r\n- David Ferrer\r\n- Herman Hevesi\r\n- Mari" +
+    "o Bellido\r\n";
+            // 
             // splash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(782, 451);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
+            this.ClientSize = new System.Drawing.Size(702, 383);
             this.Controls.Add(this.circularProgressBar1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pb_logo);
+            this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(80, 31);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(800, 498);
-            this.MinimumSize = new System.Drawing.Size(800, 498);
+            this.MaximumSize = new System.Drawing.Size(702, 383);
+            this.MinimumSize = new System.Drawing.Size(702, 383);
             this.Name = "splash";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -115,5 +132,6 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.PictureBox pb_logo;
         private System.Windows.Forms.Timer timer2;
         private CircularProgressBar.CircularProgressBar circularProgressBar1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -82,5 +82,25 @@ namespace Practica_Git___Trello
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Top3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = false;
+        }
     }
 }
