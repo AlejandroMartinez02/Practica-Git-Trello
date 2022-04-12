@@ -39,49 +39,12 @@ namespace Practica_Git___Trello
                 Acierto.Add(acierto);
             }
 
-            int p1 = 0, pos1 = 0, p2 = 0, pos2 = 0, pos3 = 0, pos4 = 0, pos5 = 0, pos6 = 0, p3 = 0, p4 = 0, p5 = 0, p6 = 0;
-
-            for (int i = 0; i < Puntos.Count; i++)
-            {
-                if (Convert.ToInt32(Puntos[i].ToString()) > p1)
-                {
-                    p1 = Convert.ToInt32(Puntos[i].ToString());
-                    pos1 = i;
-                }
-                else if (Convert.ToInt32(Puntos[i].ToString()) > p2 & Convert.ToInt32(Puntos[i].ToString()) < p1)
-                {
-                    p2 = Convert.ToInt32(Puntos[i].ToString());
-                    pos2 = i;
-                }
-                else if (Convert.ToInt32(Puntos[i].ToString()) > p3 & Convert.ToInt32(Puntos[i].ToString()) < p2)
-                {
-                    p3 = Convert.ToInt32(Puntos[i].ToString());
-                    pos3 = i;
-                }
-                else if (Convert.ToInt32(Puntos[i].ToString()) > p4 & Convert.ToInt32(Puntos[i].ToString()) < p3)
-                {
-                    p4 = Convert.ToInt32(Puntos[i].ToString());
-                    pos4 = i;
-                }
-                else if (Convert.ToInt32(Puntos[i].ToString()) > p5 & Convert.ToInt32(Puntos[i].ToString()) < p4)
-                {
-                    p5 = Convert.ToInt32(Puntos[i].ToString());
-                    pos5 = i;
-                }
-                else if (Convert.ToInt32(Puntos[i].ToString()) > p6 & Convert.ToInt32(Puntos[i].ToString()) < p5)
-                {
-                    p6 = Convert.ToInt32(Puntos[i].ToString());
-                    pos6 = i;
-                }
-            }
-
-
-            Top1.Text = NameId[pos1].ToString() + "///" + Puntos[pos1].ToString() + "///" + Acierto[pos1].ToString();
-            Top2.Text = NameId[pos2].ToString() + "///" + Puntos[pos2].ToString() + "///" + Acierto[pos2].ToString();
-            Top3.Text = NameId[pos3].ToString() + "///" + Puntos[pos3].ToString() + "///" + Acierto[pos3].ToString();
-            Top4.Text = NameId[pos4].ToString() + "///" + Puntos[pos4].ToString() + "///" + Acierto[pos4].ToString();
-            Top5.Text = NameId[pos5].ToString() + "///" + Puntos[pos5].ToString() + "///" + Acierto[pos5].ToString();
-            Top6.Text = NameId[pos6].ToString() + "///" + Puntos[pos6].ToString() + "///" + Acierto[pos6].ToString();
+            Top1.Text = NameId[0].ToString() + "///" + Puntos[0].ToString() + "///" + Acierto[0].ToString();
+            Top2.Text = NameId[1].ToString() + "///" + Puntos[1].ToString() + "///" + Acierto[1].ToString();
+            Top3.Text = NameId[2].ToString() + "///" + Puntos[2].ToString() + "///" + Acierto[2].ToString();
+            Top4.Text = NameId[3].ToString() + "///" + Puntos[3].ToString() + "///" + Acierto[3].ToString();
+            Top5.Text = NameId[4].ToString() + "///" + Puntos[4].ToString() + "///" + Acierto[4].ToString();
+            Top6.Text = NameId[5].ToString() + "///" + Puntos[5].ToString() + "///" + Acierto[5].ToString();
 
 
         }
@@ -108,16 +71,6 @@ namespace Practica_Git___Trello
             formPrincipal formP = new formPrincipal();
             formP.ShowDialog();
             this.Show();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -110,6 +110,73 @@ namespace Practica_Git___Trello
         {
             decimal resultado = Math.Ceiling(cont1 / 3);
             cont1 = 0;
+            int usuario = encontrarIdUsuario();
+            String respuestaCorrecta = encontrarRespuestaCorrecta();
+            if (sender.Equals(boton_A))
+            {
+                if (respuestaCorrecta.Equals("A"))
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'A' ," + "true" + ", " + counter + ", " + resultado + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+                else
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'A' ," + "true" + ", " + counter + ", " + 0 + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+            }
+            else if (sender.Equals(boton_B))
+            {
+                if (respuestaCorrecta.Equals("B"))
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'B' ," + "true" + ", " + counter + ", " + resultado + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+                else
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'B' ," + "true" + ", " + counter + ", " + 0 + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+            }
+            else if (sender.Equals(boton_C))
+            {
+                if (respuestaCorrecta.Equals("C"))
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'C' ," + "true" + ", " + counter + ", " + resultado + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+                else
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'C' ," + "true" + ", " + counter + ", " + 0 + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+            }
+            else if (sender.Equals(boton_D))
+            {
+                if (respuestaCorrecta.Equals("D"))
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'D' ," + "true" + ", " + counter + ", " + resultado + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+                else
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'D' ," + "true" + ", " + counter + ", " + 0 + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+            }
+            else
+            {
+                if (respuestaCorrecta.Equals("A"))
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'A' ," + "true" + ", " + counter + ", " + resultado + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+                else
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'A' ," + "true" + ", " + counter + ", " + 0 + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+            }
         }
 
         private void contador(object sender, EventArgs e)
@@ -173,35 +240,26 @@ namespace Practica_Git___Trello
 
         }
 
-        private void clickBotonA(object sender, EventArgs e)
-        {
-            int usuario = encontrarIdUsuario();
-            String respuestaCorrecta = encontrarRespuestaCorrecta();
-
-            if (respuestaCorrecta.Equals("A"))
-            {
-                NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + preguntas[0] + ", A ," + respuestaCorrecta + ", " + true + ", " + counter + ", " + 20 + "); ", conn);
-                NpgsqlDataReader nda = comm.ExecuteReader();
-            }
-            else
-            {
-                NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + preguntas[0] + ", A ," + respuestaCorrecta + ", " + false + ", " + counter + ", " + 0 + "); ", conn);
-                NpgsqlDataReader nda = comm.ExecuteReader();
-            }
-
-        }
         private int encontrarIdUsuario()
         {
-            NpgsqlCommand usu = new NpgsqlCommand("SELECT MAX(id_usuario) FROM usuarios", conn);
+            conn.Open();
+            NpgsqlCommand usu = new NpgsqlCommand("SELECT MAX(id_usuario) as user FROM usuario", conn);
             NpgsqlDataReader commUsu = usu.ExecuteReader();
-            return int.Parse(commUsu.ToString());
+            commUsu.Read();
+            int x = int.Parse(commUsu["user"].ToString());
+            commUsu.Close();
+            return x;
+            
         }
 
         private String encontrarRespuestaCorrecta()
         {
-            NpgsqlCommand pregunta = new NpgsqlCommand("SELECT r_correcta FROM preguntas WHERE id_pregunta = " + preguntas[0]);
+            NpgsqlCommand pregunta = new NpgsqlCommand("SELECT r_correcta FROM pregunta WHERE id_pregunta = " + numeros[n_pregunta],conn);
             NpgsqlDataReader commPreg = pregunta.ExecuteReader();
-            return commPreg.ToString();
+            commPreg.Read();
+            String x = commPreg["r_correcta"].ToString();
+            commPreg.Close();
+            return x;
         }
     }
     }
