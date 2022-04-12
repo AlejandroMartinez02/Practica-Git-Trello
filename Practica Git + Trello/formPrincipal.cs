@@ -38,9 +38,6 @@ namespace Practica_Git___Trello
 
             NpgsqlConnection conn = new NpgsqlConnection(@"Host=ec2-34-246-227-219.eu-west-1.compute.amazonaws.com;Username=cejtrhepkvtxov;Password=78988b91e1724a5a9ec6e0447a558529359ffe42e3c2cbf1e03ec1cda2abbac8;Database=d9d9c375se63vc;");
             conn.Open();
-
-
-
             //Iteramos hasta que la lista tenga 10 elementos
             while (numeros.Count < 10)
             {
@@ -106,15 +103,79 @@ namespace Practica_Git___Trello
             boton_D.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
         }
 
+
         private void responder(object sender, EventArgs e)
-        {
+        { 
             decimal resultado = Math.Ceiling(cont1 / 3);
+                
+            int usuario = encontrarIdUsuario();
+            String respuestaCorrecta = encontrarRespuestaCorrecta();
+            if (sender.Equals(boton_A))
+            {
+                if (respuestaCorrecta.Equals("A"))
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'A' ," + "true" + ", " + cont1 + ", " + resultado + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+                else
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'A' ," + "false" + ", " + cont1 + ", " + 0 + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+            }
+            else if (sender.Equals(boton_B))
+            {
+                if (respuestaCorrecta.Equals("B"))
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'B' ," + "true" + ", " + cont1 + ", " + resultado + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+                else
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'B' ," + "false" + ", " + cont1 + ", " + 0 + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+            }
+            else if (sender.Equals(boton_C))
+            {
+                if (respuestaCorrecta.Equals("C"))
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'C' ," + "true" + ", " + cont1 + ", " + resultado + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+                else
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'C' ," + "false" + ", " + cont1 + ", " + 0 + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+            }
+            else if (sender.Equals(boton_D))
+            {
+                if (respuestaCorrecta.Equals("D"))
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'D' ," + "true" + ", " + cont1 + ", " + resultado + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+                else
+                {
+                    NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'D' ," + "false" + ", " + cont1 + ", " + 0 + "); ", conn);
+                    comm.ExecuteNonQuery();
+                }
+            }
+            else
+            {
+                NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + numeros[n_pregunta] + ", 'E' ," + "false" + ", " + cont1 + ", " + 0 + "); ", conn);
+                comm.ExecuteNonQuery();
+            }
             cont1 = 0;
+           
+            
         }
 
         private void contador(object sender, EventArgs e)
         {
             cont1 -= 1;
+            String respuestaCorrecta = encontrarRespuestaCorrecta();
             if (cont1 < 0)
             {
                 n_pregunta++;
@@ -126,6 +187,36 @@ namespace Practica_Git___Trello
                 timer2.Enabled = true;
                 cont2 = 5;
                 label3.Text = cont2.ToString();
+
+                if (respuestaCorrecta.Equals("A"))
+                {
+                    boton_A.BackColor = Color.FromArgb(124, 169, 107);
+                    boton_B.BackColor = Color.Red;
+                    boton_C.BackColor = Color.Red;
+                    boton_D.BackColor = Color.Red;
+                }
+                else if (respuestaCorrecta.Equals("B"))
+                {
+                    boton_A.BackColor = Color.FromArgb(167, 55, 72);
+                    boton_B.BackColor = Color.FromArgb(124, 169, 107);
+                    boton_C.BackColor = Color.FromArgb(167, 55, 72);
+                    boton_D.BackColor = Color.FromArgb(167, 55, 72);
+
+                }
+                else if (respuestaCorrecta.Equals("C"))
+                {
+                    boton_A.BackColor = Color.FromArgb(167, 55, 72);
+                    boton_B.BackColor = Color.FromArgb(167, 55, 72);
+                    boton_C.BackColor = Color.FromArgb(124, 169, 107);
+                    boton_D.BackColor = Color.FromArgb(167, 55, 72);
+                }
+                else
+                {
+                    boton_A.BackColor = Color.FromArgb(167, 55, 72);
+                    boton_B.BackColor = Color.FromArgb(167, 55, 72);
+                    boton_C.BackColor = Color.FromArgb(167, 55, 72);
+                    boton_D.BackColor = Color.FromArgb(124, 169, 107);
+                }
             }
             else
             {
@@ -144,6 +235,10 @@ namespace Practica_Git___Trello
                 }
                 else
                 {
+                    boton_A.BackColor = Color.FromArgb(250, 223, 127);
+                    boton_B.BackColor = Color.FromArgb(83, 119, 187);
+                    boton_C.BackColor = Color.FromArgb(124, 169, 107);
+                    boton_D.BackColor = Color.FromArgb(167, 55, 72);
                     lbl_numPreg.Text = "Pregunta " + (n_pregunta + 1);
                     lbl_pregunta.Text = preguntas[n_pregunta].ToString();
                     boton_A.Text = respuestas[n_respuesta].ToString();
@@ -173,35 +268,52 @@ namespace Practica_Git___Trello
 
         }
 
-        private void clickBotonA(object sender, EventArgs e)
-        {
-            int usuario = encontrarIdUsuario();
-            String respuestaCorrecta = encontrarRespuestaCorrecta();
-
-            if (respuestaCorrecta.Equals("A"))
-            {
-                NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + preguntas[0] + ", A ," + respuestaCorrecta + ", " + true + ", " + counter + ", " + 20 + "); ", conn);
-                NpgsqlDataReader nda = comm.ExecuteReader();
-            }
-            else
-            {
-                NpgsqlCommand comm = new NpgsqlCommand("INSERT INTO responder VALUES(" + usuario + ", " + preguntas[0] + ", A ," + respuestaCorrecta + ", " + false + ", " + counter + ", " + 0 + "); ", conn);
-                NpgsqlDataReader nda = comm.ExecuteReader();
-            }
-
-        }
         private int encontrarIdUsuario()
         {
-            NpgsqlCommand usu = new NpgsqlCommand("SELECT MAX(id_usuario) FROM usuarios", conn);
-            NpgsqlDataReader commUsu = usu.ExecuteReader();
-            return int.Parse(commUsu.ToString());
+            try
+            {
+                conn.Open();
+                NpgsqlCommand usu = new NpgsqlCommand("SELECT MAX(id_usuario) as user FROM usuario", conn);
+                NpgsqlDataReader commUsu = usu.ExecuteReader();
+                commUsu.Read();
+                int x = int.Parse(commUsu["user"].ToString());
+                commUsu.Close();
+                return x;
+            }
+            catch (Exception)
+            {
+                NpgsqlCommand usu = new NpgsqlCommand("SELECT MAX(id_usuario) as user FROM usuario", conn);
+                NpgsqlDataReader commUsu = usu.ExecuteReader();
+                commUsu.Read();
+                int x = int.Parse(commUsu["user"].ToString());
+                commUsu.Close();
+                return x;
+            }
+            
         }
 
         private String encontrarRespuestaCorrecta()
         {
-            NpgsqlCommand pregunta = new NpgsqlCommand("SELECT r_correcta FROM preguntas WHERE id_pregunta = " + preguntas[0]);
-            NpgsqlDataReader commPreg = pregunta.ExecuteReader();
-            return commPreg.ToString();
+            try
+            {
+                conn.Open();
+                NpgsqlCommand pregunta = new NpgsqlCommand("SELECT r_correcta FROM pregunta WHERE id_pregunta = " + numeros[n_pregunta], conn);
+                NpgsqlDataReader commPreg = pregunta.ExecuteReader();
+                commPreg.Read();
+                String x = commPreg["r_correcta"].ToString();
+                commPreg.Close();
+                return x;
+            }
+            catch (Exception)
+            {
+                NpgsqlCommand pregunta = new NpgsqlCommand("SELECT r_correcta FROM pregunta WHERE id_pregunta = " + numeros[n_pregunta], conn);
+                NpgsqlDataReader commPreg = pregunta.ExecuteReader();
+                commPreg.Read();
+                String x = commPreg["r_correcta"].ToString();
+                commPreg.Close();
+                return x;
+            }
+           
         }
     }
     }

@@ -39,6 +39,16 @@ namespace Practica_Git___Trello
             this.Top4 = new System.Windows.Forms.Label();
             this.Top5 = new System.Windows.Forms.Label();
             this.Top6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Top11 = new System.Windows.Forms.Label();
+            this.top21 = new System.Windows.Forms.Label();
+            this.top31 = new System.Windows.Forms.Label();
+            this.top41 = new System.Windows.Forms.Label();
+            this.top51 = new System.Windows.Forms.Label();
+            this.top61 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -140,7 +150,7 @@ namespace Practica_Git___Trello
             this.Top4.AutoSize = true;
             this.Top4.Location = new System.Drawing.Point(418, 171);
             this.Top4.Name = "Top4";
-            this.Top4.Size = new System.Drawing.Size(37, 15);
+            this.Top4.Size = new System.Drawing.Size(47, 20);
             this.Top4.TabIndex = 7;
             this.Top4.Text = "TOP 4";
             // 
@@ -149,7 +159,7 @@ namespace Practica_Git___Trello
             this.Top5.AutoSize = true;
             this.Top5.Location = new System.Drawing.Point(418, 203);
             this.Top5.Name = "Top5";
-            this.Top5.Size = new System.Drawing.Size(37, 15);
+            this.Top5.Size = new System.Drawing.Size(47, 20);
             this.Top5.TabIndex = 8;
             this.Top5.Text = "TOP 5";
             // 
@@ -158,7 +168,7 @@ namespace Practica_Git___Trello
             this.Top6.AutoSize = true;
             this.Top6.Location = new System.Drawing.Point(418, 238);
             this.Top6.Name = "Top6";
-            this.Top6.Size = new System.Drawing.Size(37, 15);
+            this.Top6.Size = new System.Drawing.Size(47, 20);
             this.Top6.TabIndex = 9;
             this.Top6.Text = "TOP 6";
             // 
@@ -261,7 +271,7 @@ namespace Practica_Git___Trello
             // 
             // Resultado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(800, 484);
@@ -294,6 +304,13 @@ namespace Practica_Git___Trello
         private System.Windows.Forms.Label Top4;
         private System.Windows.Forms.Label Top5;
         private System.Windows.Forms.Label Top6;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label Top11;
+        private System.Windows.Forms.Label top21;
+        private System.Windows.Forms.Label top31;
+        private System.Windows.Forms.Label top41;
+        private System.Windows.Forms.Label top51;
+        private System.Windows.Forms.Label top61;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
