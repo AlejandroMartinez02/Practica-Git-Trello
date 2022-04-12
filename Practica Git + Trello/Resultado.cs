@@ -20,8 +20,8 @@ namespace Practica_Git___Trello
         public Resultado()
         {
             InitializeComponent();
-
-            String SelectN = "SELECT u.nombre, u.id_usuario, r.puntos, r.acierto FROM usuario u, responder r WHERE r.id_usuario = u.id_usuario";
+            conn.Open();
+            String SelectN = "SELECT u.nombre, u.id_usuario, SUM(r.puntos) as puntos, r.acierto FROM usuario u, responder r WHERE r.id_usuario = u.id_usuario GROUP BY(u.id_usuario, u.nombre, r.acierto) ORDER BY puntos DESC LIMIT 6; ";
             NpgsqlCommand comm = new NpgsqlCommand(SelectN, conn);
             NpgsqlDataReader nda = comm.ExecuteReader();
             ArrayList NameId = new ArrayList();
@@ -30,9 +30,9 @@ namespace Practica_Git___Trello
             //
             while (nda.Read())
             {
-                String name = nda["u.nombre"].ToString();  //Aqui si sale error es porque a lo mejor le falta o le sobra (u.* o r.*)
+                String name = nda["nombre"].ToString();  //Aqui si sale error es porque a lo mejor le falta o le sobra (u.* o r.*)
                 String id = nda["id_usuario"].ToString();
-                String punt = nda["r.puntos"].ToString();
+                String punt = nda["puntos"].ToString();
                 String acierto = nda["acierto"].ToString();
                 NameId.Add(name);
                 Puntos.Add(punt);
@@ -48,27 +48,27 @@ namespace Practica_Git___Trello
                     p1 = Convert.ToInt32(Puntos[i].ToString());
                     pos1 = i;
                 }
-                if (Convert.ToInt32(Puntos[i].ToString()) > p2 & Convert.ToInt32(Puntos[i].ToString()) < p1)
+                else if (Convert.ToInt32(Puntos[i].ToString()) > p2 & Convert.ToInt32(Puntos[i].ToString()) < p1)
                 {
                     p2 = Convert.ToInt32(Puntos[i].ToString());
                     pos2 = i;
                 }
-                if (Convert.ToInt32(Puntos[i].ToString()) > p3 & Convert.ToInt32(Puntos[i].ToString()) < p2)
+                else if (Convert.ToInt32(Puntos[i].ToString()) > p3 & Convert.ToInt32(Puntos[i].ToString()) < p2)
                 {
                     p3 = Convert.ToInt32(Puntos[i].ToString());
                     pos3 = i;
                 }
-                if (Convert.ToInt32(Puntos[i].ToString()) > p4 & Convert.ToInt32(Puntos[i].ToString()) < p3)
+                else if (Convert.ToInt32(Puntos[i].ToString()) > p4 & Convert.ToInt32(Puntos[i].ToString()) < p3)
                 {
                     p4 = Convert.ToInt32(Puntos[i].ToString());
                     pos4 = i;
                 }
-                if (Convert.ToInt32(Puntos[i].ToString()) > p5 & Convert.ToInt32(Puntos[i].ToString()) < p4)
+                else if (Convert.ToInt32(Puntos[i].ToString()) > p5 & Convert.ToInt32(Puntos[i].ToString()) < p4)
                 {
                     p5 = Convert.ToInt32(Puntos[i].ToString());
                     pos5 = i;
                 }
-                if (Convert.ToInt32(Puntos[i].ToString()) > p6 & Convert.ToInt32(Puntos[i].ToString()) < p5)
+                else if (Convert.ToInt32(Puntos[i].ToString()) > p6 & Convert.ToInt32(Puntos[i].ToString()) < p5)
                 {
                     p6 = Convert.ToInt32(Puntos[i].ToString());
                     pos6 = i;
@@ -84,21 +84,6 @@ namespace Practica_Git___Trello
             Top6.Text = NameId[pos6].ToString() + "///" + Puntos[pos6].ToString() + "///" + Acierto[pos6].ToString();
 
 
-        }
-
-
-
-
-        public NpgsqlCommand GetCommand()
-        {
-            NpgsqlCommand comm = new NpgsqlCommand();
-            comm.Connection = this.conn;
-
-            comm.CommandText = "SELECT nombre from USUARIO";
-
-
-
-            return comm;
         }
 
 

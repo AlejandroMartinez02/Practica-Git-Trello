@@ -54,6 +54,7 @@ namespace Practica_Git___Trello
             this.btn_Close.TabIndex = 0;
             this.btn_Close.Text = "SALIR DEL JUEGO";
             this.btn_Close.UseVisualStyleBackColor = false;
+            this.btn_Close.Click += new System.EventHandler(this.cerrarJuego);
             // 
             // btn_cambiaNombre
             // 
@@ -66,6 +67,7 @@ namespace Practica_Git___Trello
             this.btn_cambiaNombre.TabIndex = 1;
             this.btn_cambiaNombre.Text = "CAMBIAR NOMBRE";
             this.btn_cambiaNombre.UseVisualStyleBackColor = false;
+            this.btn_cambiaNombre.Click += new System.EventHandler(this.cambiarNombre);
             // 
             // principal
             // 
@@ -78,6 +80,7 @@ namespace Practica_Git___Trello
             this.principal.TabIndex = 2;
             this.principal.Text = "REINICIAR MISMO NOMBRE";
             this.principal.UseVisualStyleBackColor = false;
+            this.principal.Click += new System.EventHandler(this.reiniciar);
             // 
             // label1
             // 
@@ -101,7 +104,7 @@ namespace Practica_Git___Trello
             // Top2
             // 
             this.Top2.AutoSize = true;
-            this.Top2.Location = new System.Drawing.Point(63, 440);
+            this.Top2.Location = new System.Drawing.Point(403, 317);
             this.Top2.Name = "Top2";
             this.Top2.Size = new System.Drawing.Size(47, 20);
             this.Top2.TabIndex = 5;
@@ -110,7 +113,7 @@ namespace Practica_Git___Trello
             // Top3
             // 
             this.Top3.AutoSize = true;
-            this.Top3.Location = new System.Drawing.Point(63, 564);
+            this.Top3.Location = new System.Drawing.Point(63, 440);
             this.Top3.Name = "Top3";
             this.Top3.Size = new System.Drawing.Size(47, 20);
             this.Top3.TabIndex = 6;
@@ -119,7 +122,7 @@ namespace Practica_Git___Trello
             // Top4
             // 
             this.Top4.AutoSize = true;
-            this.Top4.Location = new System.Drawing.Point(403, 317);
+            this.Top4.Location = new System.Drawing.Point(403, 440);
             this.Top4.Name = "Top4";
             this.Top4.Size = new System.Drawing.Size(47, 20);
             this.Top4.TabIndex = 7;
@@ -128,7 +131,7 @@ namespace Practica_Git___Trello
             // Top5
             // 
             this.Top5.AutoSize = true;
-            this.Top5.Location = new System.Drawing.Point(403, 440);
+            this.Top5.Location = new System.Drawing.Point(63, 564);
             this.Top5.Name = "Top5";
             this.Top5.Size = new System.Drawing.Size(47, 20);
             this.Top5.TabIndex = 8;
