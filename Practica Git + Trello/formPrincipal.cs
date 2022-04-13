@@ -37,7 +37,7 @@ namespace Practica_Git___Trello
 
 
 
-            soundPlayer = new SoundPlayer(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\sound.wav");
+            soundPlayer = new SoundPlayer(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"..\..\..\Resources\sound.wav");
             soundPlayer.PlayLooping();
 
             boton_A.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
