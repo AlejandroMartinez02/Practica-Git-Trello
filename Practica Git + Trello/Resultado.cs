@@ -19,6 +19,7 @@ namespace Practica_Git___Trello
 
         public Resultado()
         {
+            int aci = 0;
             InitializeComponent();
             conn.Open();
             String SelectN = "SELECT u.nombre, u.id_usuario, SUM(r.puntos) as puntos, COUNT(r.acierto) as acierto FROM usuario u, responder r WHERE r.id_usuario = u.id_usuario GROUP BY(u.id_usuario, u.nombre) ORDER BY puntos DESC LIMIT 6; ";
@@ -30,14 +31,18 @@ namespace Practica_Git___Trello
             //
             while (nda.Read())
             {
-                String name = nda["nombre"].ToString();  //Aqui si sale error es porque a lo mejor le falta o le sobra (u.* o r.*)
+                
+
+                String name = nda["nombre"].ToString();  
                 String punt = nda["puntos"].ToString();
                 String acierto = nda["acierto"].ToString();
                 NameId.Add(name);
                 Puntos.Add(punt);
                 Acierto.Add(acierto);
+                
             }
 
+            
             Label[] label = new Label[6];
             label[0] = Top1;
             label[1] = Top2;
@@ -46,17 +51,19 @@ namespace Practica_Git___Trello
             label[4] = Top5;
             label[5] = Top6;
             Label [] label1 = new Label[6];
-            label1[0] = Top11;
-            label1[1] = top21;
-            label1[2] = top31;
-            label1[3] = top41;
-            label1[4] = top51;
-            label1[5] = top61;
+            label1[0] = r1;
+            label1[1] = r2;
+            label1[2] = r3;
+            label1[3] = r4;
+            label1[4] = r5;
+            label1[5] = r6;
+
+           
 
             for (int i = 0; i < NameId.Count; i++)
             {
                 label[i].Text = NameId[i].ToString();
-                label1[i].Text = Puntos[i].ToString() + "///" + Acierto[i].ToString() ;
+                label1[i].Text = "Puntos: " + Puntos[i].ToString() +"\n"+ "Aciertos: " + Acierto[i].ToString();
             }
 
         }
@@ -113,6 +120,16 @@ namespace Practica_Git___Trello
         private void button2_Click(object sender, EventArgs e)
         {
             panel5.Visible = false;
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Top6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
