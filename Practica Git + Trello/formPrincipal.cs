@@ -11,11 +11,15 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using Npgsql;
 using System.Collections;
+using System.Media;
+using System.IO;
+using System.Reflection;
 
 namespace Practica_Git___Trello
 {
     public partial class formPrincipal : Form
     {
+        private SoundPlayer soundPlayer;
 
         private decimal cont1 = 30;
         private decimal cont2 = 5;
@@ -30,12 +34,17 @@ namespace Practica_Git___Trello
         public formPrincipal()
         {
             InitializeComponent();
+
+
+
+            soundPlayer = new SoundPlayer(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\sound.wav");
+            soundPlayer.PlayLooping();
+
             boton_A.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             boton_B.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             boton_C.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
             boton_D.Size = new Size(panel1.Size.Width / 2, panel1.Size.Height / 2);
-
-
+                        
             NpgsqlConnection conn = new NpgsqlConnection(@"Host=ec2-34-246-227-219.eu-west-1.compute.amazonaws.com;Username=cejtrhepkvtxov;Password=78988b91e1724a5a9ec6e0447a558529359ffe42e3c2cbf1e03ec1cda2abbac8;Database=d9d9c375se63vc;");
             conn.Open();
             //Iteramos hasta que la lista tenga 10 elementos
@@ -314,6 +323,11 @@ namespace Practica_Git___Trello
                 return x;
             }
            
+        }
+
+        private void lbl_pregunta_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

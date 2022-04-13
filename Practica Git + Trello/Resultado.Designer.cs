@@ -318,10 +318,10 @@ namespace Practica_Git___Trello
             this.panel5.Controls.Add(this.principal);
             this.panel5.Controls.Add(this.btn_cambiaNombre);
             this.panel5.Controls.Add(this.btn_Close);
-            this.panel5.Location = new System.Drawing.Point(34, 109);
+            this.panel5.Location = new System.Drawing.Point(61, 95);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(572, 172);
+            this.panel5.Size = new System.Drawing.Size(572, 180);
             this.panel5.TabIndex = 13;
             this.panel5.Visible = false;
             // 
@@ -429,10 +429,10 @@ namespace Practica_Git___Trello
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(101)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(700, 363);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.r6);
             this.Controls.Add(this.r5);
             this.Controls.Add(this.r4);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
