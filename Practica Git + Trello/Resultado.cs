@@ -22,25 +22,21 @@ namespace Practica_Git___Trello
             int aci = 0;
             InitializeComponent();
             conn.Open();
-            String SelectN = "SELECT u.nombre, u.id_usuario, SUM(r.puntos) as puntos, COUNT(r.acierto) as acierto FROM usuario u, responder r WHERE r.id_usuario = u.id_usuario GROUP BY(u.id_usuario, u.nombre) ORDER BY puntos DESC LIMIT 6; ";
+            String SelectN = "SELECT u.nombre, u.id_usuario, SUM(r.puntos) as puntos, COUNT(r.acierto) as acierto FROM usuario u, responder r WHERE r.id_usuario = u.id_usuario and r.acierto = true GROUP BY(u.id_usuario, u.nombre) ORDER BY puntos DESC LIMIT 6; ";
             NpgsqlCommand comm = new NpgsqlCommand(SelectN, conn);
             NpgsqlDataReader nda = comm.ExecuteReader();
             ArrayList NameId = new ArrayList();
             ArrayList Puntos = new ArrayList();
             ArrayList Acierto = new ArrayList();
-            //
+
             while (nda.Read())
             {
-                
-
                 String name = nda["nombre"].ToString();  
                 String punt = nda["puntos"].ToString();
                 String acierto = nda["acierto"].ToString();
-                
                 NameId.Add(name);
                 Puntos.Add(punt);
                 Acierto.Add(acierto);
-                
             }
 
             
