@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using System.Media;
+
 
 namespace Practica_Git___Trello
 {
@@ -20,6 +22,7 @@ namespace Practica_Git___Trello
         {
             InitializeComponent();
             conn.Open();
+            
         }
 
         public NpgsqlCommand GetCommand()
@@ -53,5 +56,10 @@ namespace Practica_Git___Trello
             }
         }
 
+
+        private void pb_Logo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

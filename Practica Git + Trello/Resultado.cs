@@ -36,6 +36,7 @@ namespace Practica_Git___Trello
                 String name = nda["nombre"].ToString();  
                 String punt = nda["puntos"].ToString();
                 String acierto = nda["acierto"].ToString();
+                
                 NameId.Add(name);
                 Puntos.Add(punt);
                 Acierto.Add(acierto);
@@ -92,26 +93,6 @@ namespace Practica_Git___Trello
             this.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Top3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             panel5.Visible = true;
@@ -120,6 +101,16 @@ namespace Practica_Git___Trello
         private void button2_Click(object sender, EventArgs e)
         {
             panel5.Visible = false;
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Resultado_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void label7_Click(object sender, EventArgs e)

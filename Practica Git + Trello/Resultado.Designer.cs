@@ -153,7 +153,6 @@ namespace Practica_Git___Trello
             this.Top3.Size = new System.Drawing.Size(46, 15);
             this.Top3.TabIndex = 6;
             this.Top3.Text = "TOP 3";
-            this.Top3.Click += new System.EventHandler(this.Top3_Click);
             // 
             // pictureBox2
             // 
@@ -319,7 +318,7 @@ namespace Practica_Git___Trello
             this.panel5.Controls.Add(this.principal);
             this.panel5.Controls.Add(this.btn_cambiaNombre);
             this.panel5.Controls.Add(this.btn_Close);
-            this.panel5.Location = new System.Drawing.Point(34, 103);
+            this.panel5.Location = new System.Drawing.Point(34, 109);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(572, 172);
